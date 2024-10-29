@@ -1,0 +1,356 @@
+.nav-link {
+    color: #B3B3B3; 
+    text-decoration: none; 
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px; 
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #ad9610; 
+}
+
+.nav-link:focus,
+.nav-link:active {
+    color: #ad9610; 
+}
+
+/* hover button */
+
+.scroll-up-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ban đầu ẩn */
+    visibility: hidden; /* Ban đầu ẩn */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+    z-index: 1000;
+}
+
+.scroll-up-button.show {
+    opacity: 1; /* Hiện nút */
+    visibility: visible; /* Hiện trên màn hình */
+}
+
+.scroll-up-button:hover {
+    background-color: #c500ec; /* Đổi màu khi hover */
+}
+
+
+
+body, html {
+    margin: 0;
+    height: 100%; 
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden;
+}
+
+.carousel-images {
+    position: relative;
+    height: 100%; 
+}
+.carousel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Tăng thời gian và đồng bộ */
+}
+
+.carousel-images img.active {
+    opacity: 1;
+    transform: scale(1); 
+}
+
+.carousel-images img.enter {
+    opacity: 0; 
+    transform: scale(1.2);  
+    transition: opacity 4s ease, transform 4s ease; /* Thay đổi thời gian ở đây nếu cần */
+}
+
+.carousel-images img.leave {
+    opacity: 0; /* Fade out old image */
+    transform: scale(1); /* Normal size */
+}
+
+.carousel-images img.active.enter {
+    opacity: 1;
+    transform: scale(1);
+}
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent; 
+    border: 2px solid white; 
+    border-radius:5px;
+    cursor: pointer;
+    padding: 5px 40px; 
+    font-size: 24px;
+    z-index: 10;
+    color: white; 
+}
+
+/* Hiệu ứng zoom */
+@keyframes zoom-effect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.zoom {
+    animation: zoom-effect 8s forwards;
+    transform-origin: center center; 
+}
+
+.carousel-button:hover {
+    background-color: white; 
+    color: black; 
+}
+
+.carousel-button.left {
+    left: 50px;
+}
+
+.carousel-button.right {
+    right: 50px;
+}
+
+.carousel-dots {
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+}
+
+.dot:hover{
+    background-color: #ad9610;
+    width: 15px; 
+    height: 15px;
+    transform: translateY(2.1px);
+}
+
+.active {
+    background-color: #ad9610;
+    width: 15px; 
+    height: 15px;
+    transform: translateY(2.1px);
+}
+
+@media (max-width: 1023px) {
+    #mobile-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: #ffffff;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 50; /* Đặt z-index cao hơn để đảm bảo menu nằm trên overlay */
+    }
+
+    .carousel-button.left {
+        display: none;
+    }
+
+    .carousel-button.right {
+        display: none;
+    }
+
+    #mobile-menu.open {
+        transform: translateX(0);
+    }
+
+    #overlay {
+        display: none; /* Ban đầu ẩn */
+    }
+
+    #overlay.show {
+        display: block; /* Hiển thị overlay khi menu mở */
+    }
+
+    .mobile-menu-link {
+        display: block;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: right;
+        text-decoration: none;
+        color: #000000;
+        border-bottom: 1px solid #dddddd;
+        transition: background-color 0.3s ease;
+    }
+
+    .mobile-menu-link:hover {
+        background-color: #f0f0f0;
+    }
+
+    .relative.mb-7 .absolute {
+        position: relative; 
+        left: 10px; 
+        justify-content: flex-end; 
+        display: flex;
+    }
+}
+.relative.mb-7 {
+    position: relative;
+}
+
+.iconShop {
+    transition: transform 0.3s, filter 0.3s; /* Smooth transition for transform and filter */
+    filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(2300%) hue-rotate(356deg); /* Set initial color to yellow */
+    transform-origin: bottom right;
+}
+
+.iconBasket {
+    transition: transform 0.3s, filter 0.3s;
+    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+    transform-origin: bottom right;
+}
+
+.iconUser {
+    transition: transform 0.3s, filter 0.3s; 
+    filter: brightness(0) saturate(100%) invert(67%) sepia(78%) saturate(378%) hue-rotate(140deg) brightness(96%) contrast(91%);
+    transform-origin: bottom right;
+}
+
+.iconShop:hover {
+    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+}
+
+.iconBasket:hover {
+    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+}
+
+.iconUser:hover {
+    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+}
+
+
+/* Event */
+.event-carousel-button {
+    position: absolute;
+    top: 248%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 5px 40px;
+    font-size: 24px;
+    z-index: 10;
+    color: white;
+    border-radius:5px;
+}
+
+.event-carousel-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.event-carousel-button.left {
+    left: 50px;
+}
+
+.event-carousel-button.right {
+    right: 50px;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-card {
+    min-width: calc(33.33% - 15px);
+    /* Show 3 cards at a time with space between them */
+    margin-right: 16px;
+}
+
+/* Zoom effect on hover */
+.carousel-card img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-card:hover img {
+    transform: scale(1.1);
+    /* Zoom the image by 10% */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@layer components {
+    .underline-effect {
+        position: relative;
+    }
+
+    .underline-effect::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 100%;
+        height: 4px;
+        background-color: #e3342f;
+        transition: background-color 0.3s ease;
+    }
+
+    .underline-effect:hover::after {
+        background-color: black;
+    }
+}
+
+@font-face {
+    font-family: 'Fivo Sans';
+    src: url('/web/resources/font/fivo-sans.medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-fivosans {
+    font-family: 'Fivo Sans', sans-serif;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+        @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Baloo Paaji', cursive;
+            background: #1e90ff;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 400px;
+            height: 220px;
+            position: relative;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-size: 75px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            visibility: hidden;
+        }
+
+        h1.active,
+        h2.active,
+        h3.active {
+            opacity: 1;
+            visibility: visible;
+            animation-name: titleAnimation;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+        }
+
+        h1 span,
+        h2 span,
+        h3 span {
+            width: 100%;
+            float: left;
+            color: #ffffff;
+            -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            transform: translateY(-50px);
+            opacity: 0;
+            animation-name: titleAnimation;
+            animation-timing-function: ease;
+            animation-duration: 3s;
+        }
+
+        h1 span:last-child,
+        h2 span:last-child,
+        h3 span:last-child {
+            color: #ffe221;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 0 10px;
+            margin-top: 500px;
+        }
+
+        button:hover {
+            background-color: #ffe221;
+        }
+
+        @keyframes titleAnimation {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+                -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 80%);
+            }
+
+            20% {
+                transform: translateY(0);
+                opacity: 1;
+                -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+            }
+
+            80% {
+                transform: translateY(0);
+                opacity: 1;
+                -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+                clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 15%);
+            }
+
+            100% {
+                transform: translateY(50px);
+                opacity: 0;
+                -webkit-clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+                clip-path: polygon(100% 0, 100% 0%, 0 100%, 0 100%);
+            }
+        }
+    </Style>
+</head>
+
+<body>
+    <section class="container">
+        <h1 class="title active">
+            <span>Hi, nice</span><br>
+            <span>to see</span><br>
+            <span>you here</span>
+        </h1>
+
+        <h2 class="title">
+            <span>This is</span><br>
+            <span>a long</span><br>
+            <span>sub title</span>
+        </h2>
+
+        <h3 class="title">
+            <span>Xin chao</span><br>
+            <span>tat ca</span><br>
+            <span>cac ban</span>
+        </h3>
+    </section>
+
+    <div class="buttons">
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        const titles = document.querySelectorAll('.title');
+        let currentIndex = 0;
+
+        function showTitle(index) {
+            titles.forEach((title, i) => {
+                title.classList.remove('active');
+                // Reset animation by forcing a reflow
+                void title.offsetWidth; // Trigger reflow to reset animation
+                if (i === index) {
+                    title.classList.add('active');
+                }
+            });
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % titles.length;
+            showTitle(currentIndex);
+        });
+
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + titles.length) % titles.length;
+            showTitle(currentIndex);
+        });
+    </script>
+</body>
+
+</html>

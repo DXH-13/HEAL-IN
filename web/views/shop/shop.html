@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Shop</title>
+  <link rel="stylesheet" href="/web/output.css">
+  <link rel="stylesheet" href="shop.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white">
+  <!-- Header -->
+  <header class="bg-[#00105A] text-white fixed top-0 w-full z-50">
+
+    <div class="container mx-auto flex justify-between items-center py-4">
+
+      <div class="flex items-center">
+        <nav class="space-x-7">
+          <a class="navlink duration-300" href="#">Home</a>
+          <a class="navlink duration-300" href="#">About Us</a>
+          <a class="navlink duration-300" href="#">Events</a>
+          <a class="navlink duration-300" href="#">News</a>
+          <a class="navlink duration-300" href="#">Contacts</a>
+        </nav>
+      </div>
+
+      <div class="containerComboLink">
+        <a class="combolink duration-300" href="#">Shop</a>
+        <a class="combolink duration-300" href="#">Login</a>
+        <a class="combolink duration-300" href="#">My Basket</a>
+
+        <a class="fb-link duration-300" href="#">
+          <i class="fab fa-facebook-f" style="color: #00105a;"></i>
+        </a>
+        <a class="ig-link duration-300" href="#">
+          <i class="fab fa-instagram" style="color: #00105a;"></i>
+        </a>
+        <a class="twitter-link duration-300" href="#">
+          <i class="fa-brands fa-x-twitter" style="color: #00105a;"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+  <!-- Search and Buttons -->
+  <div class="bg-white py-4 pt-[80px]">
+    <div class="container mx-auto flex justify-between items-center">
+      <div><img src="/web/resources/image/logo.png" alt=""></div>
+      <form class="searchContainer" action="/search" method="GET">
+        <button type="submit" class="searchButton">
+          <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
+        </button>
+        <input class="searchInput" name="query" placeholder="Search" type="text" />
+        <a href="" class="shopallButton duration-300">SHOP ALL</a>
+        <a href="" class="eventButton duration-300">EVENTS</a>
+      </form>
+    </div>
+  </div>
+  <!-- Horizontal Line -->
+  <div class="horizontal-line"></div>
+  <!-- Categories -->
+  <div class="bg-white py-4">
+    <div class="container mx-auto flex justify-around items-center">
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px]" src="/web/resources/image/board-game.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Board Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/card-game.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Card Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/dart.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Darts</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/monopoly.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Economy Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/hotdeal-product.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Hot Deals</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/kid-game.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Kid Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/party-game.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Party Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/puzzle.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Puzzles</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/strategic-game.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Strategic
+          Games</span>
+      </div>
+
+      <div class="flex flex-col items-center text-center group">
+        <a href=""><img class="w-[64px] " src="/web/resources/image/table-tennis.png" alt=""></a>
+        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Table Tennis</span>
+      </div>
+
+    </div>
+  </div>
+  <!-- Banner -->
+  <div class="relative">
+    <img alt="Board game pieces on a board" class="w-full h-96 object-cover" height="400"
+      src="/web/resources/image/bg-shop.jpg" width="1920" />
+
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
+
+      <div class="text-left text-white ml-[300px]">
+        <h1 class="text-7xl font-bold font-montserrat">
+          Online Shop
+        </h1>
+        <p class="text-xl font-montserrat">
+          <a href="" class="hover:text-[#D1D7F2]">Home</a> - Online Shop
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="bg-white pt-[100px]">
+
+    <div class="container mx-auto p-4 flex">
+      <!-- Sidebar -->
+      <div class="w-4/7 ml-[20px]">
+
+        <!-- CART -->
+        <div class="cartInShop">
+          <h2 class="font-bold text-2xl pb-[30px] font-montserrat">
+            Cart
+          </h2>
+          <p class="font-montserrat text-[18px]">
+            No products in the cart.
+          </p>
+        </div>
+
+
+        <!-- Product Categories -->
+
+        <div class="productCategories">
+          <h2 class="font-bold pb-[30px] font-montserrat text-2xl">
+            Product Categories
+          </h2>
+          <ul class="cate-list ">
+            <li class="duration-300">Board Games</li>
+            <li class="duration-300">Card Games</li>
+            <li class="duration-300">Darts</li>
+            <li class="duration-300">Economy Games</li>
+            <li class="duration-300">Hot Deals</li>
+            <li class="duration-300">Kids Games</li>
+            <li class="duration-300">Party Games</li>
+            <li class="duration-300">Puzzles</li>
+          </ul>
+        </div>
+        <div class="priceFilter">
+          <h2 class="text-xl font-bold font-montserrat ml-[77px] pt-[77px] mb-[30px]">
+            Filter by Price
+          </h2>
+          <input class="w-[290px] h-[4px] bg-[#5725CB] rounded-lg appearance-none cursor-pointer mb-[20px] ml-[77px]"
+            max="50" min="7" type="range" value="25" />
+          <p class="mt-2 ml-[77px] font-montserrat mb-[20px]">
+            Price: $7 — $50
+          </p>
+          <button class="mt-4 w-full bg-black text-white py-2 font-bold duration-300 priceFilterbtn">
+            FILTER
+          </button>
+        </div>
+
+        <!-- Filter by Age Range -->
+        <div class="ageFilter">
+          <h2 class="font-bold pb-[30px] font-montserrat text-2xl">
+            Filter by Age Range
+          </h2>
+          <ul class="cate-list ">
+            <li class="duration-300">14 Years & Up (7)</li>
+            <li class="duration-300">2 to 4 Years (4)</li>
+            <li class="duration-300">5 to 7 Years (5)</li>
+            <li class="duration-300">8 to 13 Years (6)</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Main Content -->
+      <div class="w-4/5 ml-[120px]">
+        <div class="flex  mb-[50px]">
+
+
+          <div class="gridViewButtonContainer">
+            <button>
+              <i class="fa-solid fa-border-all fa-xl"></i>
+            </button>
+            <span class="divider"></span>
+            <button class="line-view">
+              <i class="fas fa-bars fa-xl" style="color: #c9ccd3;"></i>
+            </button>
+          </div>
+
+
+
+          <div class="softSelection">
+            <select>
+              <option>Sort by latest</option>
+              <option>Sort by latest</option>
+              <option>Sort by latest</option>
+            </select>
+          </div>
+
+
+
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Product Card 1 -->
+
+
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+
+
+          <!-- Product Card 2 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+          <!-- Product Card 4 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+
+
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+
+
+          <!-- Product Card 6 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+          <!-- Product Card 7 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+          <!-- Product Card 8 -->
+          <div class="bg-gray-100 pt-4 pl-7 productCard">
+            <div class="cate-star">
+              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                Card <br> Games
+              </h3>
+              <div class="text-red-500 mr-[20px] star-group">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="flex justify-center mt-7 mr-[25px]">
+              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
+                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                width="100" />
+            </div>
+            <div class="product-info">
+              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="py-10 bg-[#001780] text-white">
+    <div class="container mx-auto px-4 mt-[70px]">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ml-[50px]">
+
+        <div>
+          <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Find Us</h2>
+          <ul class="space-y-[40px]">
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt fa-xl text-teal-400 mr-2"></i>
+              <span>8500, Lorem Street, Chicago, IL, 55030</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt fa-xl text-[#1dd5ca] mr-2"></i>
+              <span>(123) 456-78-90</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock fa-xl text-[#1dd5ca] mr-2"></i>
+              <span>Mon-Sat 10:30am - 5pm<br>Sun 12 pm - 5 pm</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">About Us</h2>
+          <ul class="space-y-2 ">
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Home</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Game Cafe</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Blog</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Events</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Shop</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Contacts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Categories</h2>
+          <ul class="space-y-2 ">
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Board Games</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Card Games</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Economy Games</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Hot Deals</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Kids Games</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Party Games</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Strategy</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Customer Service</h2>
+          <ul class="space-y-2 ">
+            <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Our Team</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Pricing</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Privacy Policy</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Service Plus</a></li>
+            <li><a href="" class="linkFooter duration-300 font-montserrat">Our Services</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-[60px]  flex justify-between items-center">
+        <p class="mt-[40px]">
+          <span class="text-[#1dd5ca]">HEAL IN</span>
+          <span class="text-white"> © 2024. All rights reserved.</span>
+        </p>
+
+        <div class="flex space-x-4 ">
+          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+              class="fab fa-facebook-f fa-lg" style="color: #00105a; margin-left: 13px;"></i></a>
+          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+              class="fab fa-instagram fa-lg" style="color: #00105a; margin-left: 12px;"></i></a>
+          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+              class="fa-brands fa-x-twitter fa-lg" style="color: #00105a; margin-left: 10px;"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+</body>
+
+</html>
