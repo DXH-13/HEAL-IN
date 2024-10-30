@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body class="bg-white">
@@ -140,28 +144,34 @@
                 Home - Card Games - Photosynthesis Game
             </nav>
             <div class="flex flex-wrap">
+
                 <div class="w-full md:w-1/2">
                     <div class="relative">
                         <img id="mainImage" alt="Photosynthesis Game Box"
                             class="fade rounded-full w-[588px] h-[588px] mt-[30px] ml-[60px]"
-                            src="https://storage.googleapis.com/a1aa/image/Kjqhywwqq8IyA9fLLJNSMspw2OkXhiaCvSOmuLGtgfBEbirTA.jpg" />
-                        <div class="absolute top-0 right-[90px] p-2">
+                            src="https://storage.googleapis.com/a1aa/image/fmDARFtIQjSf30UXoeiN5j4K18zdm5mt1uAXwel6JphCsJuOB.jpg" />
+                        <div class="absolute top-0 right-[90px] p-2 cursor-pointer" onclick="openFullScreen()">
                             <i class="fas fa-search fa-2xl text-[#e5e7eb]"></i>
                         </div>
                     </div>
 
                     <div class="flex mt-4 space-x-4 ml-[120px]">
-                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 1" class="w-[100px] h-[100px] rounded-full border"
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 1"
+                            class="thumbnail w-[100px] h-[100px] rounded-full border"
                             src="https://storage.googleapis.com/a1aa/image/fmDARFtIQjSf30UXoeiN5j4K18zdm5mt1uAXwel6JphCsJuOB.jpg" />
-                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 2" class="w-[100px] h-[100px] rounded-full border"
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 2"
+                            class="thumbnail w-[100px] h-[100px] rounded-full border"
                             src="https://storage.googleapis.com/a1aa/image/N9dizBOx2SJdHVixCb4r9aXxeesnPaeTz3O7WBrhJF2L2EXnA.jpg" />
-                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 3" class="w-[100px] h-[100px] rounded-full border"
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 3"
+                            class="thumbnail w-[100px] h-[100px] rounded-full border"
                             src="https://storage.googleapis.com/a1aa/image/yw9ZeDiZJUz8NSdOaGe6ubLotkRe0gPRVp5ymbrsrrlD2EXnA.jpg" />
-                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 4" class="w-[100px] h-[100px] rounded-full border"
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 4"
+                            class="thumbnail w-[100px] h-[100px] rounded-full border"
                             src="https://storage.googleapis.com/a1aa/image/uE07vUGvkcKwLZwIW8ffBoGdgPhOSaa53OKWrbbyoS7CbirTA.jpg" />
                     </div>
-
                 </div>
+
+
                 <div class="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0 ">
                     <h1 class="text-4xl font-bold font-montserrat">
                         Photosynthesis Game
@@ -233,14 +243,20 @@
     </div>
 
     <!-- Information -->
-     
+
     <div class="bg-white min-h-[500px] mb-[30px]">
         <div class="max-w-[1410px] mx-auto mt-10">
             <div class="flex">
                 <div class="flex border-gray-200">
-                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[180px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'Description')">Description</button>
-                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[286px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'AdditionalInformation')">Additional information</button>
-                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[176px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'Reviews')">Reviews (1)</button>
+                    <button
+                        class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[180px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300"
+                        onclick="openTab(event, 'Description')">Description</button>
+                    <button
+                        class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[286px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300"
+                        onclick="openTab(event, 'AdditionalInformation')">Additional information</button>
+                    <button
+                        class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[176px] hover:text-white hover:bg-black hover:border-black duration-300"
+                        onclick="openTab(event, 'Reviews')">Reviews (1)</button>
                 </div>
             </div>
             <div id="Description" class="tabcontent pt-[72px] pb-[72px] pl-[78px] pr-[78px] mt-4 bg-gray-100 ">
@@ -436,6 +452,23 @@
         </div>
 
     </footer>
+    
+    <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-70 justify-center items-center z-50" >
+        <span id="closeBtn" class="absolute top-4 right-16 text-white cursor-pointer text-3xl z-10 exitbtn duration-300" onclick="closeFullScreen(event)"><i class="fa-solid fa-xmark fa-lg"></i></span>
+        <button id="fullScreenBtn" class="absolute top-4 right-36 text-white cursor-pointer text-3xl z-10 fullscreenbtn duration-300" onclick="toggleFullScreen()"><i class="fa-solid fa-expand "></i></button>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+    
+
+
 
     <script src="productdetail.js"></script>
 </body>

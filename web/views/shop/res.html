@@ -14,216 +14,40 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-white">
-  <!-- Header -->
-  <header class="bg-[#00105A] text-white fixed top-0 w-full z-50">
-    <div class="container mx-auto flex justify-between items-center py-4">
-      <div class="flex items-center">
-        <nav class="space-x-7">
-          <a class="navlink duration-300" href="#">Home</a>
-          <a class="navlink duration-300" href="#">About Us</a>
-          <a class="navlink duration-300" href="#">Events</a>
-          <a class="navlink duration-300" href="#">News</a>
-          <a class="navlink duration-300" href="#">Contacts</a>
-        </nav>
-      </div>
-
-      <div class="containerComboLink">
-        <a class="combolink duration-300" href="#">Shop</a>
-        <a class="combolink duration-300" href="#">Login</a>
-        <a class="combolink duration-300" href="#">My Basket</a>
-        <a class="fb-link duration-300" href="#">
-          <i class="fab fa-facebook-f" style="color: #00105a;"></i>
-        </a>
-        <a class="ig-link duration-300" href="#">
-          <i class="fab fa-instagram" style="color: #00105a;"></i>
-        </a>
-        <a class="twitter-link duration-300" href="#">
-          <i class="fa-brands fa-x-twitter" style="color: #00105a;"></i>
-        </a>
-      </div>
-    </div>
-  </header>
-  <!-- Search and Buttons -->
-  <div class="bg-white py-4 pt-[80px]">
-    <div class="container mx-auto flex justify-between items-center">
-      <div><img src="/web/resources/image/logo.png" alt=""></div>
-      <form class="searchContainer" action="/search" method="GET">
-        <button type="submit" class="searchButton">
-          <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
-        </button>
-        <input class="searchInput" name="query" placeholder="Search" type="text" />
-        <a href="" class="shopallButton duration-300">SHOP ALL</a>
-        <a href="" class="eventButton duration-300">EVENTS</a>
-      </form>
-    </div>
-  </div>
-
-  <button id="scrollUpBtn" class="scroll-up-button"><i class="fa-solid fa-arrow-up"></i></button>
-
-  <!-- Horizontal Line -->
-  <div class="horizontal-line"></div>
-  <!-- Categories -->
-  <div class="bg-white py-4">
-    <div class="container mx-auto flex justify-around items-center">
-      <div class="flex flex-col items-center text-center group">
-        <a href=""><img class="w-[64px]" src="/web/resources/image/board-game.png" alt=""></a>
-        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Board Games</span>
-      </div>
-      <div class="flex flex-col items-center text-center group">
-        <a href=""><img class="w-[64px] " src="/web/resources/image/card-game.png" alt=""></a>
-        <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Card Games</span>
-      </div>
-      <!-- Additional Category Icons as Needed -->
-    </div>
-  </div>
-  <!-- Banner -->
-  <div class="relative">
-    <img alt="Board game pieces on a board" class="w-full h-96 object-cover" height="400"
-      src="/web/resources/image/bg-shop.jpg" width="1920" />
-    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
-      <div class="text-left text-white ml-[300px]">
-        <h1 class="text-7xl font-bold font-montserrat">
-          Online Shop
-        </h1>
-        <p class="text-xl font-montserrat">
-          <a href="" class="hover:text-[#D1D7F2]">Home</a> - Online Shop
-        </p>
-      </div>
-    </div>
-  </div>
-  <!-- Main Content -->
-  <div class="bg-white pt-[100px]">
-    <div class="container mx-auto p-4 flex">
-      <div class="w-4/7 ml-[20px]">
-        <!-- Sidebar with Cart, Categories, Filters -->
-        <div class="cartInShop">
-          <h2 class="font-bold text-2xl pb-[30px] font-montserrat">
-            Cart
-          </h2>
-          <p class="font-montserrat text-[18px]">
-            No products in the cart.
-          </p>
+<body >
+  
+  <div class="swiper-container swiper-initialized swiper-horizontal swiper-backface-hidden">
+    <div class="swiper-wrapper" id="swiper-wrapper-e1e10ea8e5e3d8e29" aria-live="polite" style="transition-duration: 0ms; transform: translate3d(-1912px, 0px, 0px); transition-delay: 0ms;">
+        <div class="swiper-slide swiper-slide-prev" role="group" aria-label="3 / 5" data-swiper-slide-index="2" style="width: 1912px;">
+            <img class="max-w-full max-h-full object-contain" src="https://storage.googleapis.com/a1aa/image/N9dizBOx2SJdHVixCb4r9aXxeesnPaeTz3O7WBrhJF2L2EXnA.jpg">
         </div>
-      </div>
-      <!-- Product Section -->
-      <div class="w-4/5 ml-[120px]">
-        <div class="grid grid-cols-2 gap-[20px]">
-          <div class="bg-gray-100 pt-4 pl-7 productCard ">
-            <div class="cate-star">
-              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
-                Card <br> Games
-              </h3>
-              <div class="text-red-500 mr-[20px] star-group">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="flex justify-center mt-7 mr-[25px]">
-              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
-                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
-                width="100" />
-            </div>
-            <div class="product-info">
-              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
-              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
-            </div>
-          </div>
-
-          <div class="bg-gray-100 pt-4 pl-7 productCard ">
-            <div class="cate-star">
-              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
-                Card <br> Games
-              </h3>
-              <div class="text-red-500 mr-[20px] star-group">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="flex justify-center mt-7 mr-[25px]">
-              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
-                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
-                width="100" />
-            </div>
-            <div class="product-info">
-              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
-              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
-            </div>
-          </div>
-
-          <div class="bg-gray-100 pt-4 pl-7 productCard ">
-            <div class="cate-star">
-              <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
-                Card <br> Games
-              </h3>
-              <div class="text-red-500 mr-[20px] star-group">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-              </div>
-            </div>
-            <div class="flex justify-center mt-7 mr-[25px]">
-              <img alt="Image of Photosynthesis Game" class="w-64 h-64 rounded-full" height="100"
-                src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
-                width="100" />
-            </div>
-            <div class="product-info">
-              <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
-              <p class="font-normal ml-[20px] text-xl" style="display: inline;">$15.00</p>
-            </div>
-          </div>
-          <!-- More Product Cards as Needed -->
+        <div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 5" data-swiper-slide-index="3" style="width: 1912px;">
+            <img class="max-w-full max-h-full object-contain" src="https://storage.googleapis.com/a1aa/image/yw9ZeDiZJUz8NSdOaGe6ubLotkRe0gPRVp5ymbrsrrlD2EXnA.jpg">
         </div>
-      </div>
+        <div class="swiper-slide swiper-slide-next" role="group" aria-label="5 / 5" data-swiper-slide-index="4" style="width: 1912px;">
+            <img class="max-w-full max-h-full object-contain" src="https://storage.googleapis.com/a1aa/image/uE07vUGvkcKwLZwIW8ffBoGdgPhOSaa53OKWrbbyoS7CbirTA.jpg">
+        </div>
+        <div class="swiper-slide" role="group" aria-label="1 / 5" data-swiper-slide-index="0" style="width: 1912px;">
+            <img class="max-w-full max-h-full object-contain" src="https://storage.googleapis.com/a1aa/image/fmDARFtIQjSf30UXoeiN5j4K18zdm5mt1uAXwel6JphCsJuOB.jpg">
+        </div>
+        <div class="swiper-slide" role="group" aria-label="2 / 5" data-swiper-slide-index="1" style="width: 1912px;">
+            <img class="max-w-full max-h-full object-contain" src="https://storage.googleapis.com/a1aa/image/fmDARFtIQjSf30UXoeiN5j4K18zdm5mt1uAXwel6JphCsJuOB.jpg">
+        </div>
     </div>
-  </div>
-  <!-- Footer -->
-  <footer class="py-10 bg-[#001780] text-white">
-    <div class="container mx-auto px-4 mt-[70px]">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ml-[50px]">
-        <div>
-          <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Find Us</h2>
-          <ul class="space-y-[40px]">
-            <li class="flex items-center">
-              <i class="fas fa-map-marker-alt fa-xl text-teal-400 mr-2"></i>
-              <span>8500, Lorem Street, Chicago, IL, 55030</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-phone-alt fa-xl text-[#1dd5ca] mr-2"></i>
-              <span>(123) 456-78-90</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-clock fa-xl text-[#1dd5ca] mr-2"></i>
-              <span>Mon-Sat 10:30am - 5pm<br>Sun 12 pm - 5 pm</span>
-            </li>
-          </ul>
-        </div>
-        <!-- More Footer Sections -->
-      </div>
-      <div class="border-t border-blue-800 mt-[60px] flex justify-between items-center">
-        <p class="mt-[40px]">
-          <span class="text-[#1dd5ca]">HEAL IN</span>
-          <span class="text-white"> © 2024. All rights reserved.</span>
-        </p>
-        <div class="flex space-x-4 ">
-          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
-              class="fab fa-facebook-f fa-lg" style="color: #00105a; margin-left: 13px;"></i></a>
-          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
-              class="fab fa-instagram fa-lg" style="color: #00105a; margin-left: 12px;"></i></a>
-          <a href="#" class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
-              class="fa-brands fa-x-twitter fa-lg" style="color: #00105a; margin-left: 10px;"></i></a>
-        </div>
-      </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span>
+        <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 4" aria-current="true"></span>
+        <span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 5"></span>
     </div>
-  </footer>
-<script src="shop.js"></script>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next z-10" tabindex="0" role="button" aria-label="Next slide" aria-controls="swiper-wrapper-e1e10ea8e5e3d8e29"></div>
+    <div class="swiper-button-prev z-10" tabindex="0" role="button" aria-label="Previous slide" aria-controls="swiper-wrapper-e1e10ea8e5e3d8e29"></div>
+    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+</div>
+
+
 </body>
 </html>
