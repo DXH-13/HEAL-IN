@@ -1,11 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="/web/output.css">
+    <link rel="stylesheet" href="productdetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    
+
+<body class="bg-white">
+
+    <header class="bg-[#00105A] text-white fixed top-0 w-full z-50">
+
+        <div class="container mx-auto flex justify-between items-center py-4">
+
+            <div class="flex items-center">
+                <nav class="space-x-7">
+                    <a class="navlink duration-300" href="#">Home</a>
+                    <a class="navlink duration-300" href="#">About Us</a>
+                    <a class="navlink duration-300" href="#">Events</a>
+                    <a class="navlink duration-300" href="#">News</a>
+                    <a class="navlink duration-300" href="#">Contacts</a>
+                </nav>
+            </div>
+
+            <div class="containerComboLink">
+                <a class="combolink duration-300" href="#">Shop</a>
+                <a class="combolink duration-300" href="#">Login</a>
+                <a class="combolink duration-300" href="#">My Basket</a>
+
+                <a class="fb-link duration-300" href="#">
+                    <i class="fab fa-facebook-f" style="color: #00105a;"></i>
+                </a>
+                <a class="ig-link duration-300" href="#">
+                    <i class="fab fa-instagram" style="color: #00105a;"></i>
+                </a>
+                <a class="twitter-link duration-300" href="#">
+                    <i class="fa-brands fa-x-twitter" style="color: #00105a;"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <!-- Search and Buttons -->
+
+    <button id="scrollUpBtn" class="scroll-up-button"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="bg-white py-4 pt-[80px]">
+        <div class="container mx-auto flex justify-between items-center">
+            <div><img src="/web/resources/image/logo.png" alt=""></div>
+            <form class="searchContainer" action="/search" method="GET">
+                <button type="submit" class="searchButton">
+                    <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
+                </button>
+                <input class="searchInput duration-300" name="query" placeholder="Search" type="text" />
+                <a href="" class="shopallButton duration-300">SHOP ALL</a>
+                <a href="" class="eventButton duration-300">EVENTS</a>
+            </form>
+        </div>
+    </div>
+    <!-- Horizontal Line -->
+    <div class="horizontal-line"></div>
+    <!-- Categories -->
+    <div class="bg-white py-4">
+        <div class="container mx-auto flex justify-around items-center">
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px]" src="/web/resources/image/board-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Board
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/card-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Card
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/dart.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Darts</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/monopoly.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Economy
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/hotdeal-product.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Hot
+                    Deals</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/kid-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Kid
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/party-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Party
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/puzzle.png" alt=""></a>
+                <span
+                    class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Puzzles</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/strategic-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Strategic
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/table-tennis.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Table
+                    Tennis</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- Main Content -->
+
+    <div class="bg-white text-gray-800">
+        <div class="container mx-auto p-6">
+            <nav class=" text-normal text-[#878788] mb-4 font-montserrat">
+                Home - Card Games - Photosynthesis Game
+            </nav>
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2">
+                    <div class="relative">
+                        <img id="mainImage" alt="Photosynthesis Game Box"
+                            class="fade rounded-full w-[588px] h-[588px] mt-[30px] ml-[60px]"
+                            src="https://storage.googleapis.com/a1aa/image/Kjqhywwqq8IyA9fLLJNSMspw2OkXhiaCvSOmuLGtgfBEbirTA.jpg" />
+                        <div class="absolute top-0 right-[90px] p-2">
+                            <i class="fas fa-search fa-2xl text-[#e5e7eb]"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex mt-4 space-x-4 ml-[120px]">
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 1" class="w-[100px] h-[100px] rounded-full border"
+                            src="https://storage.googleapis.com/a1aa/image/fmDARFtIQjSf30UXoeiN5j4K18zdm5mt1uAXwel6JphCsJuOB.jpg" />
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 2" class="w-[100px] h-[100px] rounded-full border"
+                            src="https://storage.googleapis.com/a1aa/image/N9dizBOx2SJdHVixCb4r9aXxeesnPaeTz3O7WBrhJF2L2EXnA.jpg" />
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 3" class="w-[100px] h-[100px] rounded-full border"
+                            src="https://storage.googleapis.com/a1aa/image/yw9ZeDiZJUz8NSdOaGe6ubLotkRe0gPRVp5ymbrsrrlD2EXnA.jpg" />
+                        <img onclick="changeMainImage(this)" alt="Photosynthesis Game Image 4" class="w-[100px] h-[100px] rounded-full border"
+                            src="https://storage.googleapis.com/a1aa/image/uE07vUGvkcKwLZwIW8ffBoGdgPhOSaa53OKWrbbyoS7CbirTA.jpg" />
+                    </div>
+
+                </div>
+                <div class="w-full md:w-1/2 md:pl-10 mt-6 md:mt-0 ">
+                    <h1 class="text-4xl font-bold font-montserrat">
+                        Photosynthesis Game
+                    </h1>
+                    <div class="flex items-center mt-2 star-group">
+                        <div class="text-red-500 mt-[20px]">
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                            <i class="fas fa-star">
+                            </i>
+                        </div>
+                    </div>
+                    <div class="text-2xl font-bold text-gray-900 mt-[30px] font-montserrat ">
+                        $15.00
+                    </div>
+                    <p class=" text-gray-600 mt-[80px]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cras rhoncus elit non arcu hendrerit rhoncus. Cum sociis natoque penatibus et
+                        magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec,
+                        pellentesque eu, pretium quis, sem.
+                    </p>
+                    <div class="mt-[40px]">
+                        <label class="block text-gray-700 font-montserrat font-semibold" for="material">
+                            Material
+                        </label>
+                        <div class="materialSelection">
+                            <select id="material">
+                                <option>
+                                    Choose an option
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex items-center mt-6">
+                        <div>
+                            <input class="inputNumber" type="number" value="1" />
+                        </div>
+                        <button class="addtocartBtn duration-300">
+                            ADD TO CART
+                        </button>
+                    </div>
+                    <div class="mt-6">
+                        <button
+                            class="text-black hover:text-red-700 duration-300  mt-4 inline-block underline-effect font-montserrat font-semibold">
+                            <i class="fa-regular fa-lg fa-heart"></i>
+                            ADD TO WISHLIST
+                        </button>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-500">
+                        <p class="mt-[20px] text-black">
+                            <strong>CATEGORY:</strong>
+                            <a class="linkcate-tag duration-300" href="">Card Games</a>
+                        </p>
+                        <p class="mt-[15px] text-black">
+                            <strong>TAGS:</strong>
+                            <a class="linkcate-tag duration-300" href="">Bestsellers</a>, <a
+                                class=" duration-300 linkcate-tag" href="">Popular</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Information -->
+     
+    <div class="bg-white min-h-[500px] mb-[30px]">
+        <div class="max-w-[1410px] mx-auto mt-10">
+            <div class="flex">
+                <div class="flex border-gray-200">
+                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[180px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'Description')">Description</button>
+                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[286px] mr-[15px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'AdditionalInformation')">Additional information</button>
+                    <button class="tablinks px-4 py-2 bg-white text-gray-500 font-montserrat font-semibold text-xl border-4 border-gray-200 h-[60px] w-[176px] hover:text-white hover:bg-black hover:border-black duration-300" onclick="openTab(event, 'Reviews')">Reviews (1)</button>
+                </div>
+            </div>
+            <div id="Description" class="tabcontent pt-[72px] pb-[72px] pl-[78px] pr-[78px] mt-4 bg-gray-100 ">
+                <p class="text-gray-600">
+                    Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut
+                    bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+                    Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna, quis rutrum mi
+                    semper non. Cras rhoncus elit non arcu hendrerit rhoncus. Pellentesque dignissim volutpat orci at
+                    interdum. In id ipsum volutpat. Maecenas sit amet purus eget ipsum elementum venenatis. Aenean
+                    maximus urna magna, quis rutrum mi semper non. Cras rhoncus elit non arcu hendrerit rhoncus.
+                </p>
+            </div>
+            <div id="AdditionalInformation" class="tabcontent p-6 mt-4 bg-gray-100" style="display:none">
+                <p class="text-gray-600">
+                    Additional information content goes here. You can add more details about the product or service in
+                    this section.
+                </p>
+            </div>
+            <div id="Reviews" class="tabcontent p-6 mt-4 bg-gray-100" style="display:none">
+                <p class="text-gray-600">
+                    Reviews content goes here. You can display user reviews and ratings in this section.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Related product -->
+    <div class="bg-[#F0F2F5] pt-[80px] pl-[100px]">
+        <div class="container mx-auto py-8">
+            <h2 class="text-5xl font-extrabold mb-[50px] font-montserrat">
+                Related Products
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 mb-[100px]">
+                <!-- Product 1 -->
+
+                <div class="bg-white pt-4 pl-7 relateProductCard ">
+                    <div class="cate-star">
+                        <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                            Card <br> Games
+                        </h3>
+                        <div class="text-red-500 mr-[20px] star-group">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-7 mr-[25px]">
+                        <img alt="Image of Photosynthesis Game" class="w-[280px] h-[280px] rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                            width="100" />
+                    </div>
+                    <div class="product-info flex justify-between items-center">
+                        <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+                        <p class="font-normal text-xl mr-5" style="display: inline;">$15.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white pt-4 pl-7 relateProductCard ">
+                    <div class="cate-star">
+                        <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                            Card <br> Games
+                        </h3>
+                        <div class="text-red-500 mr-[20px] star-group">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-7 mr-[25px]">
+                        <img alt="Image of Photosynthesis Game" class="w-[280px] h-[280px] rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                            width="100" />
+                    </div>
+                    <div class="product-info flex justify-between items-center">
+                        <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+                        <p class="font-normal text-xl mr-5" style="display: inline;">$15.00</p>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white pt-4 pl-7 relateProductCard ">
+                    <div class="cate-star">
+                        <h3 class="text-[#1DD5CA] font-bold text-xl font-montserrat cate-of-product duration-300">
+                            Card <br> Games
+                        </h3>
+                        <div class="text-red-500 mr-[20px] star-group">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-7 mr-[25px]">
+                        <img alt="Image of Photosynthesis Game" class="w-[280px] h-[280px] rounded-full" height="100"
+                            src="https://storage.googleapis.com/a1aa/image/l75EF6WsfUQ5USR1pUKzlvJelBkyKXWUNGSkWNSDDpP4NNrTA.jpg"
+                            width="100" />
+                    </div>
+                    <div class="product-info flex justify-between items-center">
+                        <p class="productName duration-300" style="display: inline;">Photosynthesis Game</p>
+                        <p class="font-normal text-xl mr-5" style="display: inline;">$15.00</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+
+    <footer class="py-10 bg-[#001780] text-white">
+        <div class="container mx-auto px-4 mt-[70px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ml-[50px]">
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Find Us</h2>
+                    <ul class="space-y-[40px]">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt fa-xl text-teal-400 mr-2"></i>
+                            <span>8500, Lorem Street, Chicago, IL, 55030</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt fa-xl text-[#1dd5ca] mr-2"></i>
+                            <span>(123) 456-78-90</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock fa-xl text-[#1dd5ca] mr-2"></i>
+                            <span>Mon-Sat 10:30am - 5pm<br>Sun 12 pm - 5 pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">About Us</h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Home</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Game Cafe</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Blog</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Events</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Shop</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Categories</h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Board Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Card Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Economy Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Hot Deals</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Kids Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Party Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Strategy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Customer Service</h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Our Team</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Pricing</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Privacy Policy</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Service Plus</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Our Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-[60px]  flex justify-between items-center">
+                <p class="mt-[40px]">
+                    <span class="text-[#1dd5ca]">HEAL IN</span>
+                    <span class="text-white"> © 2024. All rights reserved.</span>
+                </p>
+
+                <div class="flex space-x-4 ">
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fab fa-facebook-f fa-lg" style="color: #00105a; margin-left: 13px;"></i></a>
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fab fa-instagram fa-lg" style="color: #00105a; margin-left: 12px;"></i></a>
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fa-brands fa-x-twitter fa-lg" style="color: #00105a; margin-left: 10px;"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="productdetail.js"></script>
 </body>
+
 </html>

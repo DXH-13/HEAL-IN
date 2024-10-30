@@ -48,6 +48,35 @@
   background-color: #1DD5CA;
 }
 
+.scroll-up-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Ban đầu ẩn */
+  visibility: hidden; /* Ban đầu ẩn */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+  z-index: 1000;
+}
+
+.scroll-up-button.show {
+  opacity: 1; /* Hiện nút */
+  visibility: visible; /* Hiện trên màn hình */
+}
+
+.scroll-up-button:hover {
+  background-color: #c500ec; /* Đổi màu khi hover */
+}
+
 .ig-link {
   right: 280px;
   width: 30px;
@@ -100,7 +129,6 @@
   margin-right: 1rem;
   font-family: "Montserrat", sans-serif;
   padding-left: 70px;
-  transition: border-color 0.3s ease-in-out, border-width 0.3s ease;
 }
 
 .searchInput:focus {
@@ -261,7 +289,6 @@
   position: relative;
   display: inline-block;
   margin-left: 287px;
-
   width: 370px;
 }
 
@@ -347,6 +374,11 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 22px;
+  cursor: pointer;
+}
+
+.cate-of-product{
+  cursor: pointer;
 }
 
 .cate-of-product:hover {
