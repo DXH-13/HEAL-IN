@@ -1,0 +1,204 @@
+.navlink {
+  font-size: 15px;
+  font-weight: 400;
+  color: #99A4DA;
+  transition: color 0.1s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navlink:hover {
+  color: #ffffff;
+}
+
+.combolink {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1DD5CA;
+  transition: color 0.1s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.combolink:hover {
+  color: #ffffff;
+}
+
+.containerComboLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 190px;
+}
+
+.fb-link {
+  right: 320px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.fb-link:hover {
+  background-color: #1DD5CA;
+}
+
+.scroll-up-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Ban đầu ẩn */
+  visibility: hidden; /* Ban đầu ẩn */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+  z-index: 1000;
+}
+
+.scroll-up-button.show {
+  opacity: 1; /* Hiện nút */
+  visibility: visible; /* Hiện trên màn hình */
+}
+
+.scroll-up-button:hover {
+  background-color: #c500ec; /* Đổi màu khi hover */
+}
+
+.ig-link {
+  right: 280px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.ig-link:hover {
+  background-color: #1DD5CA;
+}
+
+.twitter-link {
+  right: 240px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.twitter-link:hover {
+  background-color: #1DD5CA;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border: 1px solid #d1d5db;
+  width: 330px;
+  height: 70px;
+  border-radius: 0.25rem;
+  padding: 1rem 2rem;
+  margin-right: 1rem;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 70px;
+}
+
+.searchInput:focus {
+  border-color: #000000;
+  border-width: 2px;
+}
+
+
+.searchButton {
+  position: absolute;
+  margin-left: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton:hover i {
+  color: #000000 !important;
+  transition: color 0.3s ease;
+}
+
+.shopallButton {
+  display: flex;
+  height: 70px;
+  width: 150px;
+  background-color: #FFC94A;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopallButton:hover {
+  background-color: black;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+  /* Đặt font Montserrat */
+}
+
+.eventButton {
+  display: flex;
+  height: 70px;
+  width: 150px;
+  background-color: #5725CB;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  font-size: medium;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventButton:hover {
+  background-color: black;
+}
+
+.horizontal-line {
+  height: 2px;
+  background-color: #ebebeb;
+  margin: 20px 0;
+  width: 80%;
+  margin-left: 190px;
+}

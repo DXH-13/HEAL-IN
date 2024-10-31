@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/web/output.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body class="bg-white">
+
+    <header class="bg-[#00105A] text-white fixed top-0 w-full z-50">
+
+        <div class="container mx-auto flex justify-between items-center py-4">
+
+            <div class="flex items-center">
+                <nav class="space-x-7">
+                    <a class="navlink duration-300" href="#">Home</a>
+                    <a class="navlink duration-300" href="#">About Us</a>
+                    <a class="navlink duration-300" href="#">Events</a>
+                    <a class="navlink duration-300" href="#">News</a>
+                    <a class="navlink duration-300" href="#">Contacts</a>
+                </nav>
+            </div>
+
+            <div class="containerComboLink">
+                <a class="combolink duration-300" href="#">Shop</a>
+                <a class="combolink duration-300" href="#">Login</a>
+                <a class="combolink duration-300" href="#">My Basket</a>
+
+                <a class="fb-link duration-300" href="#">
+                    <i class="fab fa-facebook-f" style="color: #00105a;"></i>
+                </a>
+                <a class="ig-link duration-300" href="#">
+                    <i class="fab fa-instagram" style="color: #00105a;"></i>
+                </a>
+                <a class="twitter-link duration-300" href="#">
+                    <i class="fa-brands fa-x-twitter" style="color: #00105a;"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <!-- Search and Buttons -->
+
+    
+
+    <div class="bg-white py-4 pt-[80px]">
+        <div class="container mx-auto flex justify-between items-center">
+            <div><img src="/web/resources/image/logo.png" alt=""></div>
+            <form class="searchContainer" action="/search" method="GET">
+                <button type="submit" class="searchButton">
+                    <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
+                </button>
+                <input class="searchInput duration-300" name="query" placeholder="Search" type="text" />
+                <a href="" class="shopallButton duration-300">SHOP ALL</a>
+                <a href="" class="eventButton duration-300">EVENTS</a>
+            </form>
+        </div>
+    </div>
+
+    <button id="scrollUpBtn" class="scroll-up-button"><i class="fa-solid fa-arrow-up"></i></button>
+    <!-- Horizontal Line -->
+    <div class="horizontal-line"></div>
+    <!-- Categories -->
+    <div class="bg-white py-4">
+        <div class="container mx-auto flex justify-around items-center">
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px]" src="/web/resources/image/board-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Board
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/card-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Card
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/dart.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Darts</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/monopoly.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Economy
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/hotdeal-product.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Hot
+                    Deals</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/kid-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Kid
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/party-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Party
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/puzzle.png" alt=""></a>
+                <span
+                    class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Puzzles</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/strategic-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Strategic
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/table-tennis.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Table
+                    Tennis</span>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Banner -->
+    <div class="relative">
+        <img alt="Board game pieces on a board" class="w-full h-96 object-cover" height="400"
+            src="/web/resources/image/bg-shop.jpg" width="1920" />
+
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-start ">
+
+            <div class="text-left text-white ml-[300px]">
+                <h1 class="text-7xl font-bold font-montserrat">
+                    Online Shop
+                </h1>
+                <p class="text-xl font-montserrat">
+                    <a href="" class="hover:text-[#D1D7F2]">Home</a> <a href="" class="hover:text-[#D1D7F2]">- Online
+                        Shop</a> - Checkout
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Main Content -->
+    
+</body>
+</html>
