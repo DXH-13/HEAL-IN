@@ -33,24 +33,18 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    /* Ban đầu ẩn */
     visibility: hidden;
-    /* Ban đầu ẩn */
     transition: opacity 0.5s ease, visibility 0.5s ease;
-    /* Hiệu ứng chuyển đổi mượt */
     z-index: 1000;
 }
 
 .scroll-up-button.show {
     opacity: 1;
-    /* Hiện nút */
     visibility: visible;
-    /* Hiện trên màn hình */
 }
 
 .scroll-up-button:hover {
     background-color: #c500ec;
-    /* Đổi màu khi hover */
 }
 
 .combolink:hover {
@@ -224,4 +218,12 @@
 
 .inforButton:hover{
   background-color: white;
+}
+
+.borderCart{
+    border-bottom: 0.02rem solid #e9e6ed;
+}
+
+.borderCart2{
+    border-bottom: 0.02rem solid rgb(86 98 151 / 69%);
 }
