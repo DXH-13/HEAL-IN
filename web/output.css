@@ -815,8 +815,8 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-8 {
@@ -897,6 +897,14 @@ video {
 
 .ml-\[50px\] {
   margin-left: 50px;
+}
+
+.ml-\[60px\] {
+  margin-left: 60px;
+}
+
+.ml-\[77px\] {
+  margin-left: 77px;
 }
 
 .ml-auto {
@@ -983,24 +991,28 @@ video {
   margin-top: 20px;
 }
 
-.ml-\[77px\] {
-  margin-left: 77px;
+.mt-\[30px\] {
+  margin-top: 30px;
 }
 
-.mt-\[100px\] {
-  margin-top: 100px;
+.mt-\[40px\] {
+  margin-top: 40px;
 }
 
-.mt-\[150px\] {
-  margin-top: 150px;
+.mt-\[50px\] {
+  margin-top: 50px;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.mt-\[60px\] {
+  margin-top: 60px;
 }
 
-.ml-\[100px\] {
-  margin-left: 100px;
+.mt-\[70px\] {
+  margin-top: 70px;
+}
+
+.mt-\[80px\] {
+  margin-top: 80px;
 }
 
 .box-border {
@@ -1174,6 +1186,26 @@ video {
   height: 428px;
 }
 
+.h-\[4px\] {
+  height: 4px;
+}
+
+.h-\[588px\] {
+  height: 588px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-\[70px\] {
+  height: 70px;
+}
+
+.h-\[80px\] {
+  height: 80px;
+}
+
 .h-\[850px\] {
   height: 850px;
 }
@@ -1186,20 +1218,16 @@ video {
   height: 100%;
 }
 
-.h-2 {
-  height: 0.5rem;
+.max-h-\[150px\] {
+  max-height: 150px;
 }
 
-.h-\[292px\] {
-  height: 292px;
+.max-h-full {
+  max-height: 100%;
 }
 
-.h-\[2px\] {
-  height: 2px;
-}
-
-.h-\[4px\] {
-  height: 4px;
+.min-h-\[500px\] {
+  min-height: 500px;
 }
 
 .w-1\/2 {
@@ -1286,6 +1314,30 @@ video {
   width: 270px;
 }
 
+.w-\[280px\] {
+  width: 280px;
+}
+
+.w-\[286px\] {
+  width: 286px;
+}
+
+.w-\[290px\] {
+  width: 290px;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[30px\] {
+  width: 30px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
 .w-\[40px\] {
   width: 40px;
 }
@@ -1330,24 +1382,16 @@ video {
   width: 100%;
 }
 
-.w-\[50px\] {
-  width: 50px;
+.max-w-\[1400px\] {
+  max-width: 1400px;
 }
 
-.w-\[150px\] {
-  width: 150px;
+.max-w-\[1410px\] {
+  max-width: 1410px;
 }
 
-.w-\[450px\] {
-  width: 450px;
-}
-
-.w-\[350px\] {
-  width: 350px;
-}
-
-.w-\[290px\] {
-  width: 290px;
+.max-w-full {
+  max-width: 100%;
 }
 
 .flex-shrink {
@@ -2460,6 +2504,11 @@ video {
   background-color: rgb(87 37 203 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#606cda\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 108 218 / var(--tw-bg-opacity));
+}
+
 .bg-\[\#F0F2F5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(240 242 245 / var(--tw-bg-opacity));
@@ -2493,6 +2542,16 @@ video {
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
@@ -2683,6 +2742,16 @@ video {
   padding-right: 3rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -2772,8 +2841,8 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
+.pb-\[24px\] {
+  padding-bottom: 24px;
 }
 
 .pb-\[30px\] {
@@ -2852,16 +2921,16 @@ video {
   padding-top: 110px;
 }
 
-.pt-\[80px\] {
-  padding-top: 80px;
+.pt-\[24px\] {
+  padding-top: 24px;
 }
 
-.pt-\[30px\] {
-  padding-top: 30px;
+.pt-\[35px\] {
+  padding-top: 35px;
 }
 
-.pt-\[70px\] {
-  padding-top: 70px;
+.pt-\[72px\] {
+  padding-top: 72px;
 }
 
 .pt-\[77px\] {
@@ -3620,6 +3689,11 @@ video {
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#4654d6\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(70 84 214 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-\[\#5725CB\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(87 37 203 / var(--tw-bg-opacity));
@@ -3633,6 +3707,11 @@ video {
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gray-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-indigo-500:hover {
