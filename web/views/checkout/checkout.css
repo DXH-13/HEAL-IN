@@ -202,3 +202,11 @@
   width: 80%;
   margin-left: 190px;
 }
+
+.linkFooter:hover {
+  color: #1dd5ca;
+}
+
+.inforButton:hover{
+  background-color: white;
+}

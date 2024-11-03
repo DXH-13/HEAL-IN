@@ -22,18 +22,18 @@
 
       <div class="flex items-center">
         <nav class="space-x-7">
-          <a class="navlink duration-300" href="#">Home</a>
-          <a class="navlink duration-300" href="#">About Us</a>
-          <a class="navlink duration-300" href="#">Events</a>
+          <a class="navlink duration-300" href="http://127.0.0.1:5500/web/views/home/home.html#">Home</a>
+          <a class="navlink duration-300" href="http://127.0.0.1:5500/web/views/home/home.html#aboutus-section">About Us</a>
+          <a class="navlink duration-300" href="http://127.0.0.1:5500/web/views/home/home.html#event-section">Events</a>
           <a class="navlink duration-300" href="#">News</a>
           <a class="navlink duration-300" href="#">Contacts</a>
         </nav>
       </div>
 
       <div class="containerComboLink">
-        <a class="combolink duration-300" href="#">Shop</a>
+        <a class="combolink duration-300" href="http://127.0.0.1:5500/web/views/shop/shop.html">Shop</a>
         <a class="combolink duration-300" href="#">Login</a>
-        <a class="combolink duration-300" href="#">My Basket</a>
+        <a class="combolink duration-300" href="http://127.0.0.1:5500/web/views/cart/cart.html">My Basket</a>
 
         <a class="fb-link duration-300" href="#">
           <i class="fab fa-facebook-f" style="color: #00105a;"></i>
@@ -51,14 +51,14 @@
   <!-- Search and Buttons -->
   <div class="bg-white py-4 pt-[80px]">
     <div class="container mx-auto flex justify-between items-center">
-      <div><img src="/web/resources/image/logo.png" alt=""></div>
+      <div><img class="h-[80px]" src="/web/resources/image/icon-2.png" alt=""></div>
       <form class="searchContainer" action="/search" method="GET">
         <button type="submit" class="searchButton">
           <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
         </button>
         <input class="searchInput" name="query" placeholder="Search" type="text" />
-        <a href="" class="shopallButton duration-300">SHOP ALL</a>
-        <a href="" class="eventButton duration-300">EVENTS</a>
+        <a href="#" class="shopallButton duration-300">SHOP ALL</a>
+        <a href="http://127.0.0.1:5500/web/views/home/home.html#event-section" class="eventButton duration-300">EVENTS</a>
       </form>
     </div>
   </div>
@@ -226,8 +226,8 @@
           <div class="softSelection">
             <select>
               <option>Sort by latest</option>
-              <option>Sort by latest</option>
-              <option>Sort by latest</option>
+              <option>Sort by relevance</option>
+              <option>Sort by top sales</option>
             </select>
           </div>
 

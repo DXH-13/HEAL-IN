@@ -130,3 +130,8 @@ document.getElementById('event-prev').addEventListener('click', () => {
         container.style.transform = `translateX(-${scrollPosition}px)`;
     }
 });
+
+
+
+// scoll to section
+
