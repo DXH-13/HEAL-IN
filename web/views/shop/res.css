@@ -1,0 +1,141 @@
+.navlink, .combolink, .linkFooter, .cate-list li, .cate-of-product, .productName {
+  font-size: 1rem;
+}
+
+.containerComboLink, .softSelection, .gridViewButtonContainer {
+  gap: 1rem;
+  padding: 1rem;
+  margin-right: auto;
+}
+
+.scroll-up-button, .fb-link, .ig-link, .twitter-link {
+  right: 2vw;
+}
+
+.cartInShop, .productCategories, .ageFilter, .priceFilter {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media (min-width: 768px) {
+  .productCard {
+    width: 100%;
+    max-width: 390px;
+  }
+
+  .softSelection, .priceFilterbtn, .searchInput {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+
+.navlink {
+  font-size: 15px;
+  font-weight: 400;
+  color: #99A4DA;
+  transition: color 0.1s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navlink:hover {
+  color: #ffffff;
+}
+
+.combolink {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1DD5CA;
+  transition: color 0.1s ease-in-out;
+  font-family: "Montserrat", sans-serif;
+}
+
+.combolink:hover {
+  color: #ffffff;
+}
+
+.containerComboLink {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 190px;
+}
+
+.fb-link, .ig-link, .twitter-link {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  cursor: pointer;
+  font-size: 15px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.fb-link:hover, .ig-link:hover, .twitter-link:hover {
+  background-color: #1DD5CA;
+}
+
+.scroll-up-button {
+  position: fixed;
+  bottom: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.scroll-up-button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 330px;
+  height: 70px;
+  border-radius: 0.25rem;
+  padding-left: 70px;
+}
+
+.shopallButton, .eventButton {
+  height: 70px;
+  width: 150px;
+  border-radius: 0.25rem;
+}
+
+.horizontal-line {
+  height: 2px;
+  background-color: #ebebeb;
+  margin: 20px 0;
+  width: 80%;
+  margin-left: 10%;
+}
+
+.gridViewButtonContainer {
+  width: 100%;
+  max-width: 145px;
+}
+
+.cate-list li {
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
+
+.inforButton:hover {
+  background-color: white;
+}

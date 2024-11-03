@@ -1,18 +1,23 @@
+html {
+    scroll-behavior: smooth;
+    /* Thêm hiệu ứng cuộn mượt cho trang */
+}
+
 .nav-link {
-    color: #B3B3B3; 
-    text-decoration: none; 
+    color: #B3B3B3;
+    text-decoration: none;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px; 
+    font-size: 15px;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    color: #ad9610; 
+    color: #ad9610;
 }
 
 .nav-link:focus,
 .nav-link:active {
-    color: #ad9610; 
+    color: #ad9610;
 }
 
 /* hover button */
@@ -31,39 +36,47 @@
     cursor: pointer;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Ban đầu ẩn */
-    visibility: hidden; /* Ban đầu ẩn */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+    opacity: 0;
+    /* Ban đầu ẩn */
+    visibility: hidden;
+    /* Ban đầu ẩn */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    /* Hiệu ứng chuyển đổi mượt */
     z-index: 1000;
 }
 
 .scroll-up-button.show {
-    opacity: 1; /* Hiện nút */
-    visibility: visible; /* Hiện trên màn hình */
+    opacity: 1;
+    /* Hiện nút */
+    visibility: visible;
+    /* Hiện trên màn hình */
 }
 
 .scroll-up-button:hover {
-    background-color: #c500ec; /* Đổi màu khi hover */
+    background-color: #c500ec;
+    /* Đổi màu khi hover */
 }
 
 
 
-body, html {
+body,
+html {
     margin: 0;
-    height: 100%; 
+    height: 100%;
 }
 
 .carousel {
     position: relative;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     overflow: hidden;
 }
 
 .carousel-images {
     position: relative;
-    height: 100%; 
+    height: 100%;
 }
+
 .carousel-images img {
     width: 100%;
     height: 100%;
@@ -73,41 +86,46 @@ body, html {
     left: 0;
     opacity: 0;
     transform: scale(1.2);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Tăng thời gian và đồng bộ */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    /* Tăng thời gian và đồng bộ */
 }
 
 .carousel-images img.active {
     opacity: 1;
-    transform: scale(1); 
+    transform: scale(1);
 }
 
 .carousel-images img.enter {
-    opacity: 0; 
-    transform: scale(1.2);  
-    transition: opacity 4s ease, transform 4s ease; /* Thay đổi thời gian ở đây nếu cần */
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity 4s ease, transform 4s ease;
+    /* Thay đổi thời gian ở đây nếu cần */
 }
 
 .carousel-images img.leave {
-    opacity: 0; /* Fade out old image */
-    transform: scale(1); /* Normal size */
+    opacity: 0;
+    /* Fade out old image */
+    transform: scale(1);
+    /* Normal size */
 }
 
 .carousel-images img.active.enter {
     opacity: 1;
     transform: scale(1);
 }
+
 .carousel-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: transparent; 
-    border: 2px solid white; 
-    border-radius:5px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 5px 40px; 
+    padding: 5px 40px;
     font-size: 24px;
     z-index: 10;
-    color: white; 
+    color: white;
 }
 
 /* Hiệu ứng zoom */
@@ -115,6 +133,7 @@ body, html {
     0% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.05);
     }
@@ -122,12 +141,12 @@ body, html {
 
 .zoom {
     animation: zoom-effect 8s forwards;
-    transform-origin: center center; 
+    transform-origin: center center;
 }
 
 .carousel-button:hover {
-    background-color: white; 
-    color: black; 
+    background-color: white;
+    color: black;
 }
 
 .carousel-button.left {
@@ -156,16 +175,16 @@ body, html {
     transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
 }
 
-.dot:hover{
+.dot:hover {
     background-color: #ad9610;
-    width: 15px; 
+    width: 15px;
     height: 15px;
     transform: translateY(2.1px);
 }
 
 .active {
     background-color: #ad9610;
-    width: 15px; 
+    width: 15px;
     height: 15px;
     transform: translateY(2.1px);
 }
@@ -181,7 +200,8 @@ body, html {
         background-color: #ffffff;
         transform: translateX(100%);
         transition: transform 0.3s ease;
-        z-index: 50; /* Đặt z-index cao hơn để đảm bảo menu nằm trên overlay */
+        z-index: 50;
+        /* Đặt z-index cao hơn để đảm bảo menu nằm trên overlay */
     }
 
     .carousel-button.left {
@@ -197,11 +217,13 @@ body, html {
     }
 
     #overlay {
-        display: none; /* Ban đầu ẩn */
+        display: none;
+        /* Ban đầu ẩn */
     }
 
     #overlay.show {
-        display: block; /* Hiển thị overlay khi menu mở */
+        display: block;
+        /* Hiển thị overlay khi menu mở */
     }
 
     .mobile-menu-link {
@@ -221,19 +243,22 @@ body, html {
     }
 
     .relative.mb-7 .absolute {
-        position: relative; 
-        left: 10px; 
-        justify-content: flex-end; 
+        position: relative;
+        left: 10px;
+        justify-content: flex-end;
         display: flex;
     }
 }
+
 .relative.mb-7 {
     position: relative;
 }
 
 .iconShop {
-    transition: transform 0.3s, filter 0.3s; /* Smooth transition for transform and filter */
-    filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(2300%) hue-rotate(356deg); /* Set initial color to yellow */
+    transition: transform 0.3s, filter 0.3s;
+    /* Smooth transition for transform and filter */
+    filter: brightness(0) saturate(100%) invert(75%) sepia(99%) saturate(2300%) hue-rotate(356deg);
+    /* Set initial color to yellow */
     transform-origin: bottom right;
 }
 
@@ -244,24 +269,30 @@ body, html {
 }
 
 .iconUser {
-    transition: transform 0.3s, filter 0.3s; 
+    transition: transform 0.3s, filter 0.3s;
     filter: brightness(0) saturate(100%) invert(67%) sepia(78%) saturate(378%) hue-rotate(140deg) brightness(96%) contrast(91%);
     transform-origin: bottom right;
 }
 
 .iconShop:hover {
-    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
-    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+    transform: rotate(15deg);
+    /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%);
+    /* Change yellow to white */
 }
 
 .iconBasket:hover {
-    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
-    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+    transform: rotate(15deg);
+    /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%);
+    /* Change yellow to white */
 }
 
 .iconUser:hover {
-    transform: rotate(15deg); /* Rotate the image 45 degrees on hover */
-    filter: brightness(0) saturate(100%) invert(100%); /* Change yellow to white */
+    transform: rotate(15deg);
+    /* Rotate the image 45 degrees on hover */
+    filter: brightness(0) saturate(100%) invert(100%);
+    /* Change yellow to white */
 }
 
 
@@ -277,7 +308,7 @@ body, html {
     font-size: 24px;
     z-index: 10;
     color: white;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
 .event-carousel-button:hover {

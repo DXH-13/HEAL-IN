@@ -16,7 +16,7 @@
     <!-- Fontawesome Icons v6.1.1 -->
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
     <title>Home</title>
-    <link rel="icon" type="image/png" href="/web/resources/image/logo.png">
+    <link rel="icon" type="image/png" href="/web/resources/image/icon-2.png">
 </head>
 
 <body>
@@ -43,17 +43,17 @@
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
-                        <img class="h-113 w-auto" src="/web/resources/image/logo.png" alt="logo">
+                        <img class="h-[100px] w-auto" src="/web/resources/image/icon-2.png" alt="logo">
                     </a>
                 </div>
 
                 <!-- Centered Desktop Links -->
                 <div class="hidden lg:flex lg:gap-x-12 mr-40 justify-center"> <!-- Center the links -->
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="http://127.0.0.1:5500/web/views/home/home.html" class="nav-link">Home</a>
                     <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="nav-link">Play Demo Game</a>
-                    <a href="#" class="nav-link">Event</a>
-                    <a href="#" class="nav-link">About Us</a>
-                    <a href="#" class="nav-link">Online Shop</a>
+                    <a href="#event-section" class="nav-link">Event</a>
+                    <a href="#aboutus-section" class="nav-link">About Us</a>
+                    <a href="http://127.0.0.1:5500/web/views/shop/shop.html" class="nav-link">Online Shop</a>
                     <a href="#" class="nav-link">Contact</a>
                 </div>
 
@@ -112,8 +112,8 @@
             <div id="mobile-menu" class="lg:hidden">
                 <a href="#" class="mobile-menu-link">Home</a>
                 <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="mobile-menu-link">Play Demo Game</a>
-                <a href="#" class="mobile-menu-link">Event</a>
-                <a href="#" class="mobile-menu-link">About Us</a>
+                <a href="#event-section" class="mobile-menu-link scroll-link">Event</a>
+                <a href="#aboutus-section" class="mobile-menu-link scroll-link">About Us</a>
                 <a href="#" class="mobile-menu-link">Online Shop</a>
                 <a href="#" class="mobile-menu-link">Contact</a>
             </div>
@@ -133,7 +133,7 @@
                     Welcome to Our Club
                 </h2>
                 <h1 class="text-5xl font-bold text-black leading-tight mt-2">
-                    We Are a Board Game Cafe
+                    We Are a Board Game 
                 </h1>
                 <p class="text-gray-600 text-lg mt-4">
                     We're a mixed bag of game players. Some of us have been playing board games for ages, some of us
@@ -162,7 +162,7 @@
     </div>
 
     <!-- Event -->
-    <div class="bg-[#5725cb] h-[850px]">
+    <div class="bg-[#5725cb] h-[850px]" id="event-section">
         <div class="container mx-auto py-12">
             <h1 class="text-center text-white text-7xl font-bold mt-[50px] mb-[80px]">
                 UPCOMING EVENTS
@@ -335,7 +335,7 @@
     </div>
 
 <!-- team -->
-    <div class="bg-white text-gray-900">
+    <div class="bg-white text-gray-900" id="aboutus-section">
         <div class="container mx-auto py-12">
             <h1 class="text-6xl font-bold text-center mb-12">OUR TEAM</h1>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-x-0 gap-y-8 w-[1200px] ml-[170px]">
