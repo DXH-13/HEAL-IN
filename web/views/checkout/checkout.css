@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  /* Thêm hiệu ứng cuộn mượt cho trang */
+}
+
 .navlink {
   font-size: 15px;
   font-weight: 400;
@@ -62,19 +67,25 @@
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Ban đầu ẩn */
-  visibility: hidden; /* Ban đầu ẩn */
-  transition: opacity 0.5s ease, visibility 0.5s ease; /* Hiệu ứng chuyển đổi mượt */
+  opacity: 0;
+  /* Ban đầu ẩn */
+  visibility: hidden;
+  /* Ban đầu ẩn */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  /* Hiệu ứng chuyển đổi mượt */
   z-index: 1000;
 }
 
 .scroll-up-button.show {
-  opacity: 1; /* Hiện nút */
-  visibility: visible; /* Hiện trên màn hình */
+  opacity: 1;
+  /* Hiện nút */
+  visibility: visible;
+  /* Hiện trên màn hình */
 }
 
 .scroll-up-button:hover {
-  background-color: #c500ec; /* Đổi màu khi hover */
+  background-color: #c500ec;
+  /* Đổi màu khi hover */
 }
 
 .ig-link {
@@ -207,6 +218,6 @@
   color: #1dd5ca;
 }
 
-.inforButton:hover{
+.inforButton:hover {
   background-color: white;
 }

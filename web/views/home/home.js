@@ -132,6 +132,3 @@ document.getElementById('event-prev').addEventListener('click', () => {
 });
 
 
-
-// scoll to section
-

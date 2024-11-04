@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Place order</title>
+    <link rel="stylesheet" href="/web/output.css">
+    <link rel="stylesheet" href="placeordersuccessfully.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-white">
+
+    <header class="bg-[#00105A] text-white fixed top-0 w-full z-50">
+
+        <div class="container mx-auto flex justify-between items-center py-4">
+
+            <div class="flex items-center">
+                <nav class="space-x-7">
+                    <a class="navlink duration-300" href="http://127.0.0.1:5500/web/views/home/home.html#">Home</a>
+                    <a class="navlink duration-300"
+                        href="http://127.0.0.1:5500/web/views/home/home.html#aboutus-section">About Us</a>
+                    <a class="navlink duration-300"
+                        href="http://127.0.0.1:5500/web/views/home/home.html#event-section">Events</a>
+                    <a class="navlink duration-300" href="#">News</a>
+                    <a class="navlink duration-300" href="#">Contacts</a>
+                </nav>
+            </div>
+
+            <div class="containerComboLink">
+                <a class="combolink duration-300" href="http://127.0.0.1:5500/web/views/shop/shop.html">Shop</a>
+                <a class="combolink duration-300" href="#">Login</a>
+                <a class="combolink duration-300" href="http://127.0.0.1:5500/web/views/cart/cart.html">My Basket</a>
+
+                <a class="fb-link duration-300" href="#">
+                    <i class="fab fa-facebook-f" style="color: #00105a;"></i>
+                </a>
+                <a class="ig-link duration-300" href="#">
+                    <i class="fab fa-instagram" style="color: #00105a;"></i>
+                </a>
+                <a class="twitter-link duration-300" href="#">
+                    <i class="fa-brands fa-x-twitter" style="color: #00105a;"></i>
+                </a>
+            </div>
+
+        </div>
+    </header>
+    <!-- Search and Buttons -->
+
+    <button id="scrollUpBtn" class="scroll-up-button"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="bg-white py-4 pt-[80px]">
+        <div class="container mx-auto flex justify-between items-center">
+            <div><img src="/web/resources/image/logo.png" alt=""></div>
+            <form class="searchContainer" action="/search" method="GET">
+                <button type="submit" class="searchButton">
+                    <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #bcc0c8; "></i>
+                </button>
+                <input class="searchInput duration-300" name="query" placeholder="Search" type="text" />
+                <a href="" class="shopallButton duration-300">SHOP ALL</a>
+                <a href="" class="eventButton duration-300">EVENTS</a>
+            </form>
+        </div>
+    </div>
+    <!-- Horizontal Line -->
+    <div class="horizontal-line"></div>
+    <!-- Categories -->
+    <div class="bg-white py-4">
+        <div class="container mx-auto flex justify-around items-center">
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px]" src="/web/resources/image/board-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Board
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/card-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Card
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/dart.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Darts</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/monopoly.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Economy
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/hotdeal-product.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Hot
+                    Deals</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/kid-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Kid
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/party-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Party
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/puzzle.png" alt=""></a>
+                <span
+                    class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Puzzles</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/strategic-game.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Strategic
+                    Games</span>
+            </div>
+
+            <div class="flex flex-col items-center text-center group">
+                <a href=""><img class="w-[64px] " src="/web/resources/image/table-tennis.png" alt=""></a>
+                <span class="mt-2 text-lg font-bold text-gray-700 group-hover:text-[#5725CB] duration-300">Table
+                    Tennis</span>
+            </div>
+
+        </div>
+    </div>
+    <!-- Main Content -->
+
+    <div class="bg-gray-100 font-sans pt-[50px] pb-[50px]" id="placeordersuccessfully">
+        <div class="max-w-4xl mx-auto bg-white p-8 mt-10 shadow-md">
+            <div class="text-center">
+                <div class="text-6xl text-blue-500 mb-4">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 class="text-3xl font-bold mb-2">Thank you for your order!</h1>
+                <p class="text-gray-600 mb-4">The order confirmation email with details of your order and a link to
+                    track its progress has been sent to your email address.</p>
+                <div class="inline-block bg-gray-200 text-gray-700 px-4 py-2 rounded-full mb-4">YOUR ORDER # IS:
+                    000000003 - PENDING</div>
+                <p class="text-gray-600">Order Date: 25 JUL 2018</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+                <div class="space-y-4">
+                    <div class="bg-gray-100 p-4 rounded">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-home text-blue-500 mr-2"></i>
+                            <h2 class="font-bold text-gray-700">SHIPPING ADDRESS</h2>
+                        </div>
+                        <p class="text-gray-700 font-bold">Veronica Costello</p>
+                        <p class="text-gray-700">6146 Honey Bluff Parkway</p>
+                        <p class="text-gray-700">Calder, Michigan, 49628-7978</p>
+                        <p class="text-gray-700">United States</p>
+                        <p class="text-gray-700">T: (555) 229-3326</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-file-invoice text-blue-500 mr-2"></i>
+                            <h2 class="font-bold text-gray-700">BILLING ADDRESS</h2>
+                        </div>
+                        <p class="text-gray-700 font-bold">Veronica Costello</p>
+                        <p class="text-gray-700">6146 Honey Bluff Parkway</p>
+                        <p class="text-gray-700">Calder, Michigan, 49628-7978</p>
+                        <p class="text-gray-700">United States</p>
+                        <p class="text-gray-700">T: (555) 229-3326</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-100 p-4 rounded">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-truck text-blue-500 mr-2"></i>
+                            <h2 class="font-bold text-gray-700">SHIPPING METHOD</h2>
+                        </div>
+                        <p class="text-gray-700">Flat Rate - Fixed</p>
+                    </div>
+                    <div class="bg-gray-100 p-4 rounded">
+                        <div class="flex items-center mb-2">
+                            <i class="fas fa-credit-card text-blue-500 mr-2"></i>
+                            <h2 class="font-bold text-gray-700">PAYMENT METHOD</h2>
+                        </div>
+                        <p class="text-gray-700">Check / Money order</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 bg-gray-100 p-4 rounded">
+                    <div class="flex items-center mb-2">
+                        <i class="fas fa-file-invoice text-blue-500 mr-2"></i>
+                        <h2 class="font-bold text-gray-700">ORDER SUMMARY</h2>
+                    </div>
+                    <div class="flex items-center mb-2">
+                        <img src="/web/resources/image/products/cardgames/masoi/masoi_1.png" alt="Image of Rival Field Messenger"
+                            class="w-20 h-20 mr-4">
+                        <div>
+                            <p class="text-gray-700 font-bold">Rival Field Messenger</p>
+                            <p class="text-gray-600">SKU: 24-MB06</p>
+                            <p class="text-gray-600">Qty: 3.0</p>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <p class="text-gray-700">$15.00</p>
+                    </div>
+                    <div class="border-t border-gray-300 mt-4 pt-4">
+                        <div class="flex justify-between text-gray-700">
+                            <p>Subtotal</p>
+                            <p>$15.00</p>
+                        </div>
+                        <div class="flex justify-between text-gray-700">
+                            <p>Shipping & Handling</p>
+                            <p>$25.00</p>
+                        </div>
+                        <div class="flex justify-between text-gray-700">
+                            <p>Tax</p>
+                            <p>$1.0</p>
+                        </div>
+                        <div class="flex justify-between text-gray-700 font-bold">
+                            <p>Grand Total</p>
+                            <p>$41.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between mt-8 ">
+                <a href="http://127.0.0.1:5500/web/views/shop/shop.html" class="bg-blue-500 text-white px-4 py-2 rounded flex items-center hover:bg-[#224bb9] duration-300">
+                    <i class="fa-solid fa-cart-shopping mr-2"></i> Continue Shopping
+                </a>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center ml-[350px] hover:bg-[#224bb9] duration-300">
+                    <i class="fas fa-print mr-2"></i> Print Order
+                </button>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center hover:bg-[#224bb9] duration-300">
+                    <i class="fas fa-redo mr-2"></i> Re-Order
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Footer -->
+
+    <footer class="py-10 bg-[#001780] text-white">
+        <div class="container mx-auto px-4 mt-[70px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ml-[50px]">
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Find Us</h2>
+                    <ul class="space-y-[40px]">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt fa-xl text-teal-400 mr-2"></i>
+                            <span>8500, Lorem Street, Chicago, IL, 55030</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt fa-xl text-[#1dd5ca] mr-2"></i>
+                            <span>(123) 456-78-90</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock fa-xl text-[#1dd5ca] mr-2"></i>
+                            <span>Mon-Sat 10:30am - 5pm<br>Sun 12 pm - 5 pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">About Us</h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Home</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Game Cafe</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Blog</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Events</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Shop</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Contacts</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Categories</h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Board Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Card Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Economy Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Hot Deals</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Kids Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Party Games</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Strategy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-[#1dd5ca] text-2xl font-semibold font-montserrat mb-[30px]">Customer Service
+                    </h2>
+                    <ul class="space-y-2 ">
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">About Us</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Our Team</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Pricing</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Privacy Policy</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Service Plus</a></li>
+                        <li><a href="" class="linkFooter duration-300 font-montserrat">Our Services</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-[60px]  flex justify-between items-center">
+                <p class="mt-[40px]">
+                    <span class="text-[#1dd5ca]">HEAL IN</span>
+                    <span class="text-white"> © 2024. All rights reserved.</span>
+                </p>
+
+                <div class="flex space-x-4 ">
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fab fa-facebook-f fa-lg" style="color: #00105a; margin-left: 13px;"></i></a>
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fab fa-instagram fa-lg" style="color: #00105a; margin-left: 12px;"></i></a>
+                    <a href="#"
+                        class="flex items-center h-[40px] w-[40px] bg-[#1dd5ca] rounded-full inforButton duration-300"><i
+                            class="fa-brands fa-x-twitter fa-lg" style="color: #00105a; margin-left: 10px;"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
