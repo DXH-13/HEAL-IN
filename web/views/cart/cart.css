@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+    /* Thêm hiệu ứng cuộn mượt cho trang */
+}
 .navlink {
     font-size: 15px;
     font-weight: 400;
