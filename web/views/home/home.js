@@ -5,7 +5,16 @@ const imagesCount = imageElements.length;
 let index = 0;
 let intervalId;
 
-// Thêm dots để điều hướng các slide
+const navLinks = document.querySelectorAll('.nav-link');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
+
+
+
 for (let i = 0; i < imagesCount; i++) {
     const dot = document.createElement('span');
     dot.classList.add('dot');
@@ -19,11 +28,9 @@ imageElements[index].classList.add('active');
 
 function updateCarousel() {
     imageElements.forEach((img, i) => {
-        // Xóa bỏ class active và zoom của tất cả ảnh
         img.classList.remove('active', 'zoom');
         
         if (i === index) {
-            // Thêm class active và zoom cho ảnh mới
             img.classList.add('active', 'zoom');
         }
     });

@@ -4,18 +4,18 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="home.css" />
-    <link rel="stylesheet" href="/web/output.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
     <!-- Open Sans Font -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Fontawesome Icons v6.1.1 -->
     <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
-    <title>Home</title>
+    <title>HEAL IN</title>
     <link rel="icon" type="image/png" href="/web/resources/image/icon-2.png">
 </head>
 
@@ -27,173 +27,149 @@
             <img src="/web/resources/image/carousel-1.jpg" alt="Slide 1">
             <img src="/web/resources/image/carousel-2.jpg" alt="Slide 2">
             <img src="/web/resources/image/carousel-3.jpg" alt="Slide 3">
-            <img src="/web/resources/image/carouse_4l.jpg" alt="Slide 4">
-            <img src="/web/resources/image/carousel-5.webp" alt="Slide 5">
         </div>
-        <button class="carousel-button left" id="prev"><i class="fa-solid fa-arrow-right fa-rotate-180 duration-300"></i></button>
-        <button class="carousel-button right" id="next"><i class="fa-solid fa-arrow-right duration-300"></i></button>
+        <button class="carousel-button left" id="prev">
+            <i class="fa-solid fa-arrow-right fa-rotate-180 duration-300"></i>
+        </button>
+        <button class="carousel-button right" id="next">
+            <i class="fa-solid fa-arrow-right duration-300"></i>
+        </button>
         <div class="carousel-dots" id="carousel-dots"></div>
     </div>
 
     <button id="scrollUpBtn" class="scroll-up-button"><i class="fa-solid fa-arrow-up"></i></button>
 
+    <header>
+        <!-- Navbar -->
+        <nav aria-label="Global">
+            <div class="logo">
+                <a href="#">
+                    <img style="height: 100px; width: auto;" src="/web/resources/image/icon-2.png" alt="logo">
+                </a>
+            </div>
 
-    <div>
-        <header class="absolute inset-x-0 top-0 z-50">
-            <!-- Navbar -->
-            <nav class="flex items-center p-6 lg:px-8" aria-label="Global">
-                <div class="flex lg:flex-1">
-                    <a href="#" class="-m-1.5 p-1.5">
-                        <span class="sr-only">Your Company</span>
-                        <img class="h-[100px] w-auto" src="/web/resources/image/icon-2.png" alt="logo">
+            <!-- Centered Desktop Links -->
+            <div class="navlink-container"> <!-- Center the links -->
+                <a href="http://127.0.0.1:5500/web/views/home/home.html" class="nav-link active">Home</a>
+                <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="nav-link">Play Demo Game</a>
+                <a href="#event-section" class="nav-link">Event</a>
+                <a href="#aboutus-section" class="nav-link">About Us</a>
+                <a href="http://127.0.0.1:5500/web/views/shop/shop.html" class="nav-link">Online Shop</a>
+                <a href="#" class="nav-link">Contact</a>
+            </div>
+
+
+            <!-- Icons and Mobile Menu Button -->
+            <div class="icon-menu-container"> <!-- Grouped parent container -->
+                <!-- Icons -->
+                <div class="icon-container">
+                    <a href="">
+                        <img class="iconShop" width="10" height="10"
+                            src="https://img.icons8.com/ios/50/online-store.png" alt="online-store" />
+                    </a>
+                    <a href="">
+                        <img class="iconUser" width="70" height="70" src="https://img.icons8.com/comic/100/user.png"
+                            alt="user" />
+                    </a>
+                    <a href="">
+                        <img class="iconBasket" width="30" height="30"
+                            src="https://img.icons8.com/ios-filled/50/wicker-basket--v1.png" alt="basket" />
+                    </a>
+
+                </div>
+
+                <!-- Mobile menu button (visible on mobile only) -->
+                <div class="menu-mobile">
+                    <button type="button" class="mobile-menu-Btn" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fa-solid fa-bars fa-2xl"></i>
+                    </button>
+                </div>
+
+                <!-- Login button (visible on large screens only) -->
+                <div>
+                    <a href="http://127.0.0.1:5500/web/views/login/login.html?" class="loginBtn">
+                        LOG IN
                     </a>
                 </div>
-
-                <!-- Centered Desktop Links -->
-                <div class="hidden lg:flex lg:gap-x-12 mr-40 justify-center"> <!-- Center the links -->
-                    <a href="http://127.0.0.1:5500/web/views/home/home.html" class="nav-link">Home</a>
-                    <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="nav-link">Play Demo Game</a>
-                    <a href="#event-section" class="nav-link">Event</a>
-                    <a href="#aboutus-section" class="nav-link">About Us</a>
-                    <a href="http://127.0.0.1:5500/web/views/shop/shop.html" class="nav-link">Online Shop</a>
-                    <a href="#" class="nav-link">Contact</a>
-                </div>
-
-
-                <!-- Icons and Mobile Menu Button -->
-                <div class="flex items-center space-x-4 ml-auto mr-12"> <!-- Grouped parent container -->
-                    <!-- Icons -->
-                    <div class="relative flex space-x-8 mr-12  ">
-                        <!-- <a href=""><i class="fa-solid fa-shop fa-2xl"></i></a> -->
-                        <a href="" class="inline-block">
-                            <img class="iconShop h-10 w-10" width="10" height="10"
-                                src="https://img.icons8.com/ios/50/online-store.png" alt="online-store" />
-                        </a>
-                        <a href="">
-                            <img class="iconUser h-10 w-10" width="70" height="70"
-                                src="https://img.icons8.com/comic/100/user.png" alt="user" />
-                        </a>
-                        <a href="">
-                            <img class="iconBasket h-10 w-10" width="30" height="30"
-                                src="https://img.icons8.com/ios-filled/50/wicker-basket--v1.png"
-                                alt="wicker-basket--v1" />
-                        </a>
-
-                    </div>
-
-                    <!-- Mobile menu button (visible on mobile only) -->
-                    <div class="flex lg:hidden ml-4">
-                        <button type="button"
-                            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-black-700"
-                            id="mobile-menu-button">
-                            <span class="sr-only">Open main menu</span>
-                            <i class="fa-solid fa-bars fa-2xl"></i>
-                        </button>
-                    </div>
-
-                    <!-- Login button (visible on large screens only) -->
-                    <div class="hidden lg:flex lg:ml-6">
-                        <a href="http://127.0.0.1:5500/web/views/login/login.html?" class="py-7 px-12 text-xl font-bold transition-colors duration-300"
-                            style="background-color: #5725cb; color: #ffffff; border-radius: 7px;"
-                            onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#000000';"
-                            onmouseout="this.style.backgroundColor='#5725cb'; this.style.color='#ffffff';">
-                            LOG IN
-                        </a>
-                    </div>
-                </div>
-            </nav>
-
-
-
-
-
-            <!-- Overlay -->
-            <div id="overlay" class="hidden fixed inset-0 bg-black opacity-50 z-40"></div>
-
-            <!-- Mobile menu -->
-            <div id="mobile-menu" class="lg:hidden">
-                <a href="#" class="mobile-menu-link">Home</a>
-                <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="mobile-menu-link">Play Demo Game</a>
-                <a href="#event-section" class="mobile-menu-link scroll-link">Event</a>
-                <a href="#aboutus-section" class="mobile-menu-link scroll-link">About Us</a>
-                <a href="#" class="mobile-menu-link">Online Shop</a>
-                <a href="#" class="mobile-menu-link">Contact</a>
             </div>
+        </nav>
 
+        <!-- Overlay -->
+        <div id="overlay" class="overlay"></div>
 
-        </header>
-    </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="menu-mobile-link">
+            <a href="#" class="mobile-menu-link">Home</a>
+            <a href="http://127.0.0.1:5500/web/views/game/cardanimation2.html" class="mobile-menu-link">Play Demo
+                Game</a>
+            <a href="#event-section" class="mobile-menu-link scroll-link">Event</a>
+            <a href="#aboutus-section" class="mobile-menu-link scroll-link">About Us</a>
+            <a href="#" class="mobile-menu-link">Online Shop</a>
+            <a href="#" class="mobile-menu-link">Contact</a>
+        </div>
+    </header>
+
     <!-- introduction -->
-    <div class="bg-white">
-        <div class="container mx-auto px-4 py-32 flex items-center justify-between">
-            <div class="w-1/2">
-                <img style="border-radius: 10px;" alt="Two people playing foosball on a small table" height="400"
-                    src="/web/resources/image/about.jpg" width="600" />
-            </div>
-            <div class="w-1/2 pl-8">
-                <h2 class="text-gray-500 text-lg">
-                    Welcome to Our Club
-                </h2>
-                <h1 class="text-5xl font-bold text-black leading-tight mt-2">
-                    We Are a Board Game 
-                </h1>
-                <p class="text-gray-600 text-lg mt-4">
-                    We're a mixed bag of game players. Some of us have been playing board games for ages, some of us
-                    have
-                    only just begun to discover the wealth of board games out there.
-                </p>
-                <p class="text-gray-600 text-lg mt-4">
-                    Some of us prefer
-                    <span class="font-bold">
-                        Euros
-                    </span>
-                    , others are more interested in the
-                    <span class="font-bold">
-                        American style
-                    </span>
-                    , dripping with theme board games. Some of us like abstracts. Some of us just like everything. All
-                    of us
-                    like to play games and just having a good time.
-                </p>
-                <button class="mt-6 rounded-lg bg-red-500 text-white py-6 px-8 duration-300 text-lg font-bold hover:bg-black">
-                    VISIT THE GAME SHOP
-                </button>
-
-            </div>
+    <div class="intro-section">
+        <div class="intro-image-container">
+            <img alt="Two people playing foosball on a small table" src="/web/resources/image/about.jpg" />
+        </div>
+        <div class="intro-des-container">
+            <h2>Welcome to Our Club</h2>
+            <h1>We Are a Board Game</h1>
+            <p>
+                We're a mixed bag of game players. Some of us have been playing board games for ages, some of us
+                have only just begun to discover the wealth of board games out there.
+            </p>
+            <p>
+                Some of us prefer
+                <span>Euros</span>, others are more interested in the
+                <span>American style</span>, dripping with theme board games. Some of us like abstracts. Some of us just
+                like everything. All
+                of us like to play games and just having a good time.
+            </p>
+            <button class="visit-shop-btn">
+                VISIT THE GAME SHOP
+            </button>
         </div>
     </div>
 
+
     <!-- Event -->
-    <div class="bg-[#5725cb] h-[850px]" id="event-section">
-        <div class="container mx-auto py-12">
-            <h1 class="text-center text-white text-7xl font-bold mt-[50px] mb-[80px]">
+    <div id="event-section">
+        <div class="event-container">
+            <h1>
                 UPCOMING EVENTS
             </h1>
 
-            <button class="event-carousel-button left" id="event-prev"><i class="fa-solid fa-arrow-right fa-rotate-180 "></i></button>
-            <button class="event-carousel-button right" id="event-next"><i class="fa-solid fa-arrow-right "></i></button>
+            <button class="event-carousel-button left" id="event-prev">
+                <i class="fa-solid fa-arrow-right fa-rotate-180 "></i>
+            </button>
+            <button class="event-carousel-button right" id="event-next">
+                <i class="fa-solid fa-arrow-right "></i>
+            </button>
 
-            <div class="relative">
+            <div style="position: relative;">
                 <div class="carousel-wrapper">
                     <div class="carousel-container" id="carousel-container">
 
                         <!-- card1 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card  h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-1.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-1.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">13</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold ">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
@@ -201,66 +177,63 @@
 
 
                         <!-- card2 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card  h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-2.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-2.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">03</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold mb-2">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
                         </div>
 
                         <!-- card3 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card  h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-3.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-3.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">03</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold mb-2">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
                         </div>
 
                         <!-- card1 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card  h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-1.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-1.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">03</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold ">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
@@ -268,48 +241,47 @@
 
 
                         <!-- card2 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-2.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-2.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">03</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold mb-2">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
                         </div>
 
                         <!-- card3 -->
-                        <div class="bg-white shadow-lg overflow-hidden carousel-card h-[420px] rounded-lg">
-                            <div class="relative overflow-hidden">
-                                <img alt="People playing a board game"
-                                    class="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
-                                    height="253" src="/web/resources/image/event-3.jpg" width="450" />
-                                <div
-                                    class="absolute top-5 left-5 bg-[#ffc94a] text-white text-center rounded-[30px] px-7 py-6">
-                                    <p class="text-4xl font-bold">03</p>
-                                    <p class="text-sm font-bold">JUL</p>
+                        <div class="card-event carousel-card">
+                            <div class="img-card-event">
+                                <img alt="People playing a board game" class="img-card" height="253"
+                                    src="/web/resources/image/event-3.jpg" width="450" />
+                                <div class="img-card-infor">
+                                    <p class="day-event">03</p>
+                                    <p class="month-event">JUL</p>
                                 </div>
                             </div>
-                            <div class="p-6 ml-4">
-                                <h2 class="text-lg font-bold mb-2">Card Poker Competition</h2>
-                                <hr class="my-6 border-2 border-gray-300 rounded-lg">
-                                <p class="text-gray-600 flex items-center">
-                                    <img class="mr-2" src="/web/resources/icon/icon-location.svg" alt="">
+                            <div class="infor-card-event">
+                                <h2 class="event-name">Card Poker Competition</h2>
+                                <hr class="seperated-line-event">
+                                <p class="event-place">
+                                    <img style="margin-right: 0.5rem;" src="/web/resources/icon/icon-location.svg"
+                                        alt="">
                                     Canada, Scarborough
                                 </p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -319,250 +291,273 @@
 
     <!-- video -->
 
-    <div class="bg-gray-100 flex justify-center items-center h-[428px]">
-        <div class="w-full h-[428px] flex justify-between items-center bg-[#ffc94a] shadow-lg">
-            <!-- Text Section -->
-            <div class="w-1/2 flex flex-col justify-center pl-6">
-                <p class="text-4xl font-bold mb-4 ml-32">"This is a sample comment to demonstrate the layout."</p>
-                <p class="text-lg italic ml-32">- John Doe</p>
-            </div>
-            <!-- Video Section -->
-            <div class="w-2/5 flex justify-end">
-                <video controls class="h-full border-1 border-gray-800">
-                    <source src="/web/resources/video/10 Second Video Loop.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+    <div class="video-section">
+        <!-- Text Section -->
+        <div class="text-video-section">
+            <p class="text-comment">"This is a sample comment to demonstrate the layout."</p>
+            <p class="commentor">- John Doe</p>
+        </div>
+        <!-- Video Section -->
+        <div class="video-container">
+            <video controls class="main-video">
+                <source src="/web/resources/video/10 Second Video Loop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
     </div>
 
-<!-- team -->
-    <div class="bg-white text-gray-900" id="aboutus-section">
-        <div class="container mx-auto py-12">
-            <h1 class="text-6xl font-bold text-center mb-12">OUR TEAM</h1>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-x-0 gap-y-8 w-[1200px] ml-[170px]">
-                <!-- member1 -->
-                <div class="text-center ">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
+    <!-- team -->
+    <div id="aboutus-section">
+
+        <h1>OUR TEAM</h1>
+
+        <div class="member-container">
+            <!-- member1 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
                 </div>
-    
-                <!-- member2 -->
-                <div class="text-center">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-    
-                <!-- member3 -->
-                <div class="text-center">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-    
-                <!-- member4 -->
-                <div class="text-center">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-    
-                <!-- member5 -->
-                <div class="text-center">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
-    
-                <!-- member6 -->
-                <div class="text-center">
-                    <div class="w-[240px] h-[240px] overflow-hidden rounded-full mx-auto mb-4">
-                        <img alt="Portrait of Samuel Wilson" class="w-full h-full object-cover transform transition duration-300 ease-in-out hover:scale-110"
-                            src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
-                    </div>
-                    <h2 class="text-2xl font-bold">Samuel Wilson</h2>
-                    <p class="text-gray-500 font-semibold mb-4">CO-FOUNDER</p>
-                    <div class="flex justify-center space-x-4">
-                        <a class="text-blue-600 text-2xl hover:text-blue-800 transition-colors duration-200" href="#"><i class="fab fa-facebook"></i></a>
-                        <a class="text-red-500 text-2xl hover:text-red-600 transition-colors duration-200" href="#"><i class="fab fa-instagram"></i></a>
-                        <a class="text-black text-2xl hover:text-gray-700 transition-colors duration-200" href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    </div>
-                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
                 </div>
             </div>
+
+            <!-- member2 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
+                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- member3 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
+                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- member4 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
+                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- member5 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
+                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- member6 -->
+            <div class="member-card-container">
+                <div class="img-member-container">
+                    <img alt="Portrait of Samuel Wilson"
+                        src="https://storage.googleapis.com/a1aa/image/VWiU5BxRSGLQC54SooQgCOXiGyjuBZI9zPVcmPJdyRsethyJA.jpg" />
+                </div>
+                <h2 class="member-name">Samuel Wilson</h2>
+                <p class="member-role">co-founder</p>
+                <div class="member-contact-container">
+                    <a class="fb-member-link" href="#">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="ig-member-link" href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="x-member-link" href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
-
 
     <!-- Game Journal -->
-    <div class="bg-gray-100">
-        <div class="flex">
-            <!-- Left Section -->
-            <div class="w-2/3 pt-[110px] pl-[100px]">
-                <h1 class="text-5xl font-bold mb-[80px] ">
-                    Game Journal
-                </h1>
-                <div class="grid grid-cols-2 gap-8 w-[1070px]">
-                    <!-- First Article -->
-                    <div>
-                        <div class="relative mb-[40px] overflow-hidden group">
-                            <img alt="People celebrating with drinks"
-                                class="w-full h-[276px] object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
-                                height="276" src="/web/resources/image/gamejornal1.jpg" width="490" />
-                            <span
-                                class="absolute top-0 left-0 bg-[#ffc94a] hover:bg-black duration-300 text-white text-xs font-bold px-7 py-3 ">
-                                NEW RULES
-                            </span>
-                        </div>
-                        <h2 class="text-2xl font-bold mt-4 mb-[30px]">
-                            5 Old Favourite Games Revived
-                        </h2>
-                        <div class="flex items-center text-gray-500 text-sm mt-2">
-                            <i class="far fa-calendar-alt mr-2">
-                            </i>
-                            May 28, 2019
-                            <i class="far fa-comment ml-4 mr-2">
-                            </i>
-                            0
-                            <i class="fas fa-fire ml-4 mr-2">
-                            </i>
-                            0
-                        </div>
-                        <p class="text-gray-700 mt-4 mb-[20px]">
-                            It seems people have been playing chess and checkers for ages. So what are the reasons for games
-                            with a long history to be in great request nowadays?
-                        </p>
-                        <a class="text-black hover:text-red-700 duration-300  mt-4 inline-block underline-effect " href="#">
-                            CONTINUE READING
-                        </a>
-    
-                    </div>
-                    <!-- Second Article -->
-                    <div>
-                        <div class="relative mb-[40px] overflow-hidden group">
-                            <img alt="People playing a board game"
-                                class="w-full h-[276px] object-cover transition-transform duration-300 ease-in-out transform group-hover:scale-105"
-                                height="276" src="/web/resources/image/gamejournal2.jpg" width="490" />
-                            <span
-                                class="absolute top-0 left-0 bg-[#ffc94a] hover:bg-black duration-300 text-white text-xs font-bold px-7 py-3 ">
-                                NEW RULES
-                            </span>
-                        </div>
-                        <h2 class="text-2xl font-bold mt-4 mb-[30px]">
-                            Tips on How to Create a Board Game
-                        </h2>
-                        <div class="flex items-center text-gray-500 text-sm mt-2">
-                            <i class="far fa-calendar-alt mr-2">
-                            </i>
-                            May 28, 2019
-                            <i class="far fa-comment ml-4 mr-2">
-                            </i>
-                            0
-                            <i class="fas fa-fire ml-4 mr-2">
-                            </i>
-                            4
-                        </div>
-                        <p class="text-gray-700 mt-4 mb-[20px]">
-                            Want to impress your friends? A homemade board game is a thing to leave everybody open-mouthed
-                            on your next game night. But before you show it, you’ll have to design it.
-                        </p>
-                        <a class="text-black hover:text-red-700 duration-300  mt-4 inline-block underline-effect  "
-                            href="#">
-                            CONTINUE READING
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <!-- Right Section -->
-            <!-- Right Section -->
-            <div class="w-1/3 bg-[#5725cb] p-8 text-white h-[955px] flex flex-col items-center justify-center">
-                <h1 class="text-5xl font-bold mb-[80px] text-center font-fivosans">
-                    Facebook
-                </h1>
-    
-                <div class="flex justify-center mb-8">
-                    <iframe class="rounded-lg"
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffcbarcelona&tabs=timeline&width=380&height=490&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-                        width="380" height="490" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
-                        allowfullscreen="true"
-                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
-                </div>
-                <button
-                    class="bg-black rounded-lg text-white font-bold py-8 px-[93px] mt-4 w-auto hover:text-black duration-300 hover:bg-white">
-                    FOLLOW US ON FACEBOOK
-                </button>
-    
-            </div>
-    
-        </div>
-    
-    </div>
-    <!-- Footer -->
-    <div class="bg-white">
-        <div class="flex justify-center items-center h-96">
-            <div class="bg-teal-400 p-10  w-3/4 h-[250px] rounded-lg">
-                <div class="flex flex-col space-y-4 mt-6">
+    <div class="game-journal">
+        <!-- Description Section -->
 
-                    <div class="flex items-center space-x-16">
-                        <h2 class="text-4xl font-bold text-black text-center ml-6">Newsletter</h2>
-                        <input type="email" placeholder="Enter E-mail" class="p-6 border border-black-900 w-[700px] rounded-lg">
-                        <button class="bg-black text-white p-6 font-bold w-[270px] rounded-lg">SUBSCRIBE NOW</button>
+        <div class="gj-des-section">
+
+            <h1>Game Journal</h1>
+
+            <div class="article-container">
+                <!-- First Article -->
+                <div>
+                    <div class="fisrt-article-img-container group">
+                        <img alt="People celebrating with drinks" class="fisrt-article-img" height="276"
+                            src="/web/resources/image/gamejornal1.jpg" width="490" />
+                        <span class="article-tag">
+                            NEW RULES
+                        </span>
                     </div>
-                    <div class="flex items-center self-start ml-[272px]">
-                        <input class="w-7 h-7 rounded-xl mr-2" type="checkbox" id="privacy" class="mr-2">
-                        <label for="privacy" class="text-gray-700">I agree to the
-                            <a href="#" class="text-blue-600">Privacy Policy</a>.
-                        </label>
+
+                    <h2 class="article-title">
+                        5 Old Favourite Games Revived
+                    </h2>
+                    <div class="interact-data">
+                        <i class="far fa-calendar-alt" style="margin-right: 0.5rem "></i>
+                        May 28, 2019
+                        <i class="far fa-comment" style="margin-left: 1rem; margin-right: 0.5rem;"></i>
+                        0
+                        <i class="fas fa-fire" style="margin-left: 1rem; margin-right: 0.5rem;"></i>
+                        0
                     </div>
+
+                    <p class="article-content">
+                        It seems people have been playing chess and checkers for ages. So what are the reasons for
+                        games
+                        with a long history to be in great request nowadays?
+                    </p>
+                    <a class="contn-reading-btn underline-effect" href="#">
+                        CONTINUE READING
+                    </a>
                 </div>
+
+                <!-- Second Article -->
+                <div>
+                    <div class="fisrt-article-img-container group">
+                        <img alt="People celebrating with drinks" class="fisrt-article-img" height="276"
+                            src="/web/resources/image/gamejornal1.jpg" width="490" />
+                        <span class="article-tag">
+                            NEW RULES
+                        </span>
+                    </div>
+
+                    <h2 class="article-title">
+                        5 Old Favourite Games Revived
+                    </h2>
+                    <div class="interact-data">
+                        <i class="far fa-calendar-alt" style="margin-right: 0.5rem "></i>
+                        May 28, 2019
+                        <i class="far fa-comment" style="margin-left: 1rem; margin-right: 0.5rem;"></i>
+                        0
+                        <i class="fas fa-fire" style="margin-left: 1rem; margin-right: 0.5rem;"></i>
+                        0
+                    </div>
+
+                    <p class="article-content">
+                        It seems people have been playing chess and checkers for ages. So what are the reasons for
+                        games
+                        with a long history to be in great request nowadays?
+                    </p>
+                    <a class="contn-reading-btn underline-effect" href="#">
+                        CONTINUE READING
+                    </a>
+                </div>
+
             </div>
         </div>
-        <footer class="bg-blue-900 text-white text-center py-14 mt-10">
-            <p>HEAL IN © 2024. All rights reserved.</p>
-        </footer>
+
+        <!-- Right Section -->
+        <div class="fb-infor-section">
+            <h1>Facebook</h1>
+
+            <div class="fb-frame">
+                <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffcbarcelona&tabs=timeline&width=380&height=490&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="380" height="490" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+            </div>
+
+            <button class="followbtn">
+                FOLLOW US ON FACEBOOK
+            </button>
+        </div>
+
     </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="subscribe-section">
+        <div class="subscribe-container">
+            <div class="subscribe-form">
+                <h2>Newsletter</h2>
+                <input type="email" placeholder="Enter E-mail" >
+                <button>SUBSCRIBE NOW</button>
+            </div>
+            <div class="policy-container">
+                <input  type="checkbox" >
+                <label for="privacy">I agree to the
+                    <a href="#" >Privacy Policy</a>.
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>HEAL IN © 2024. All rights reserved.</p>
+    </footer>
+
 
     <script src="home.js"></script>
 </body>
