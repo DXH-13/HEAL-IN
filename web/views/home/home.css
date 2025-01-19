@@ -65,6 +65,11 @@ nav {
     margin-left: 1%;
 }
 
+.logo a img {
+    height: 100px;
+    width: auto;
+}
+
 
 .icon-menu-container {
     display: flex;
@@ -107,7 +112,7 @@ nav {
     margin-left: 1rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 480px) {
     .menu-mobile {
         display: none;
     }
@@ -1082,4 +1087,109 @@ body {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     margin-top: 2.5rem;
+}
+
+
+
+/* Responsive for mobile */
+
+@media (max-width: 480px) {
+
+    .navlink-container {
+        display: none;
+    }
+
+    .logibtn-container {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .logo {
+        margin-left: 70px;
+    }
+
+    .logo a img {
+        width: 60px;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .icon-menu-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-mobile {
+        flex: 1;
+        text-align: right;
+    }
+
+    .icon-container {
+        display: flex;
+        gap: 0.5rem;
+        margin-right: 0rem;
+        margin-left: 0.5rem;
+
+    }
+
+    .menu-mobile {
+        margin-left: 0rem;
+    }
+
+    .icon-container a img {
+        width: 33px;
+        height: auto;
+    }
+
+
+    /* Introduction */
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 4rem 1rem;
+        gap: 2rem;
+    }
+
+    .intro-image-container {
+        order: 1;
+        max-width: 100%;
+    }
+
+    .intro-des-container {
+        order: 2;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .intro-des-container h1 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .intro-des-container h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .intro-des-container p {
+        font-size: 0.875rem;
+    }
+
+    .visit-shop-btn {
+        order: 3;
+        padding: 1rem 1.5rem;
+        font-size: 0.875rem;
+        margin-top: 1rem;
+    }
+
+
 }
