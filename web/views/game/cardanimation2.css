@@ -2,6 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Merienda:wght@300..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -19,36 +20,70 @@ body {
     overflow: auto;
 }
 
-.stack {
+/* .stack {
     margin-top: 700px;
     position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+} */
+
+.stack {
+    margin-top: 73vh;
+    /* Dùng vh để khoảng cách tương đối theo chiều cao màn hình */
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
 }
 
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .stack {
+        margin-top: 73vh;
+        /* Giảm khoảng cách trên màn hình tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .stack {
+        margin-top: 73vh;
+        /* Điều chỉnh khoảng cách trên màn hình nhỏ hơn */
+    }
+}
+
+@media (max-width: 480px) {
+    .stack {
+        margin-top: 73vh;
+        /* Giảm tối đa khoảng cách trên điện thoại */
+    }
+}
+
+
 .stack.folded .card {
-    opacity: 0; 
-    transform: translateX(0); 
+    opacity: 0;
+    transform: translateX(0);
     cursor: default;
 }
 
 .stack.folded .card:nth-last-child(1) {
-    transform: translateX(-70px); 
+    transform: translateX(-70px);
 }
 
 .stack.folded .card:nth-last-child(2) {
-    transform: translateX(20px); 
+    transform: translateX(20px);
 }
 
 .stack.folded .card:nth-last-child(3) {
-    transform: translateX(110px); 
+    transform: translateX(110px);
 }
 
 .stack.folded .card:nth-last-child(-n+3) {
-    opacity: 1; 
-    position: relative; 
+    opacity: 1;
+    position: relative;
     left: 30px;
     cursor: pointer;
 }
@@ -59,14 +94,15 @@ body {
 
 @keyframes swap {
     50% {
-      transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
-      animation-timing-function: ease-in;
+        transform: translate(-50%, calc(var(--y) - 250px)) scale(0.85) rotate(-5deg);
+        animation-timing-function: ease-in;
     }
+
     100% {
-      transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
-      z-index: -1;
+        transform: translate(-50%, calc(var(--y) - 15px)) scale(0.85);
+        z-index: -1;
     }
-  }
+}
 
 .stack .card {
     position: absolute;
@@ -82,6 +118,32 @@ body {
     cursor: pointer;
     transition: 0.5s;
     transform-origin: 50% 100%;
+
+    perspective: 1000px;
+    /* transition: transform 0.6s ease, z-index 0.3s; */
+}
+
+
+.stack .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.stack .card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.stack .card .front,
+.stack .card .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .stack .card .back {
@@ -93,89 +155,119 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    font-weight: 700;
     transition: transform 0.5s;
-    background: #f0f0f0;
-    color: black;
     transform: rotateY(180deg);
 }
 
-.stack .card .front {
-    background-image: url('/web/resources/image/card_demo.jpg');
-    background-size: cover; 
-    background-position: center; 
+.stack .card .back img {
     width: 100%;
     height: 100%;
-    border-radius: 6px; 
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid rgb(154, 30, 34);
 }
 
-.stack .card.active .front {
-    transform: rotateY(180deg);
+
+.stack .card .front {
+    background-image: url('/web/resources/image/card_back.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid rgb(154, 30, 34);
 }
 
-.stack .card.active .back {
-    
-    transform: rotateY(0);
-    
-}
+
+
+
+
+
 
 .stack .card.spread {
-    transform: translate(calc(var(--i) * 15px), 0);
+    transform: translate(calc(var(--i) * 20px), 0);
     color: rgba(0, 0, 0, 0.25);
     opacity: 1;
-    left:1000px;
+    left: 990px;
 }
+
 
 .stack .card.active {
     transform: translateY(-200px) scale(3.76);
     z-index: 100;
-    background: #5e5cfc;
-    color: black;
-    }
+}
+
 
 .stack .card:hover:not(.active) {
     margin-bottom: 25px;
 }
 
+
+
+
 .shuffle-spread-button {
     z-index: 1;
     position: absolute;
-    top: 830px;
-    left: 900px;
-    height: 100px;
-    width: 100px;
-    transform: translate(-100%, -50%);
-    padding: 10px 20px;
+    top: 87vh;
+    left: 45%;
+    height: 10vw;
+    width: 10vw;
+    max-height: 100px;
+    max-width: 100px;
+    min-height: 60px;
+    min-width: 60px;
+    transform: translate(-50%, -50%);
+    padding: 10px;
     background-color: #ffd480;
     color: black;
     border: 5px solid rgba(172, 106, 0, 0.78);
-    border-radius: 50%; 
+    border-radius: 50%;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     cursor: pointer;
     font-size: 1.2em;
-    transition: 0.5s;
-    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.7);   
+    transition: all 0.5s ease;
+    box-shadow: inset 0 0 0 5px rgba(255, 255, 255, 0.7);
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .shuffle-spread-button {
+        top: 87vh;
+        height: 12vw;
+        width: 12vw;
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .shuffle-spread-button {
+        top: 87vh;
+        height: 15vw;
+        width: 15vw;
+        font-size: 0.8em;
+    }
+}
+
 
 .hidden {
     display: none;
 }
 
 .shuffle-spread-button:hover {
-    background-color: rgba(172, 106, 0, 0.78); 
+    background-color: rgba(172, 106, 0, 0.78);
     color: white;
 }
 
 .shuffle-spread-button.spread {
-    left: calc(550px); 
+    left: calc(600px);
     transform: translate(-100%, -50%);
 }
+
 .shuffle-spread-button.spread:hover {
-    left: calc(550px); 
+    left: calc(600px);
     transform: translate(-100%, -50%);
     cursor: not-allowed;
 }
@@ -185,6 +277,7 @@ body {
         transform: translate(-120%, -70px) scale(1.05) rotate(-5deg);
         animation-timing-function: ease-in;
     }
+
     100% {
         transform: translate(-100%, -50px) scale(0.9);
         z-index: -1;
@@ -203,7 +296,7 @@ body {
     z-index: 1000;
     border-radius: 12px;
     flex-direction: column;
-    gap: 0px ;
+    gap: 0px;
     border: 2px solid #ffd480;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -216,9 +309,9 @@ body {
     z-index: 1000;
     border-radius: 10px;
     color: black;
-    padding-left: 10px; 
-    text-align: center; 
-    display: flex; 
+    padding-left: 10px;
+    text-align: center;
+    display: flex;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -229,33 +322,70 @@ body {
 }
 
 .userName:first-child {
-    margin-top: 15px; 
+    margin-top: 15px;
 }
 
-.room{
+.room {
     margin-left: 20px;
     color: white;
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-    margin-top:10px;
+    margin-top: 10px;
 }
 
-.icon-button {
+.copy-button {
     border: none;
     background: transparent;
     cursor: pointer;
-    transition: transform 0.5s; /* Smooth transition */
+    transition: transform 0.5s;
+    /* Smooth transition */
 }
 
-.icon-button:hover {
-    transform: scale(1.2); /* Increase size to 150% */
+.copy-button:hover {
+    transform: scale(1.2);
+    /* Increase size to 150% */
 }
 
-.outButton{
-    width:50px;
-    height:50px;
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .userContainer {
+        width: 300px;
+        /* Tăng kích thước để tránh các phần tử bị tràn */
+        height: auto;
+        /* Cho phép chiều cao tự động */
+        top: 20px;
+        left: 20px;
+    }
+
+    .userName {
+        font-size: 16px;
+        /* Tăng kích thước chữ một chút */
+        height: 35px;
+        padding-left: 8px;
+    }
+
+    .fa-hand-point-left {
+        font-size: 20px;
+        /* Giữ cho icon vừa vặn */
+        margin-top: 10px;
+    }
+
+    .room {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    .copy-button {
+        font-size: 18px;
+    }
+}
+
+
+
+.outButton {
+    width: 50px;
+    height: 50px;
     border: 2px solid #ffd480;
     border-radius: 50%;
     display: flex;
@@ -264,21 +394,21 @@ body {
     right: 14px;
     background: rgba(172, 106, 0, 0.78);
     cursor: pointer;
-    font-size:12px;
+    font-size: 12px;
     align-items: center;
     justify-content: center;
     text-decoration: none;
 }
 
 .outButton:hover i {
-    transform:scale(1.1);
+    transform: scale(1.1);
     transition: transform 0.5s;
 }
 
 
-.chatButton{
-    width:50px;
-    height:50px;
+.chatButton {
+    width: 50px;
+    height: 50px;
     border: 2px solid #ffd480;
     border-radius: 50%;
     display: flex;
@@ -287,72 +417,101 @@ body {
     left: 25px;
     background: rgba(172, 106, 0, 0.78);
     cursor: pointer;
-    font-size:10px;
+    font-size: 10px;
     align-items: center;
     justify-content: center;
 }
 
 .chatButton:hover i {
-    transform:scale(1.1);
+    transform: scale(1.1);
     transition: transform 0.5s;
 }
 
-.musicButton{
+.musicButton {
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size:10px;
+    font-size: 10px;
 }
 
-.musicButton:hover{
-    transform:scale(1.1);
+.musicButton:hover {
+    transform: scale(1.1);
     transition: transform 0.5s;
 }
 
 
-.soundButton{
+.soundButton {
     border: none;
     background: transparent;
     cursor: pointer;
-    font-size:10px;
+    font-size: 10px;
 }
 
-.soundButton:hover{
-    transform:scale(1.1);
+.soundButton:hover {
+    transform: scale(1.1);
     transition: transform 0.5s;
 }
 
-  .soundContainer {
-    top:18px;
-    right:80px;
+.soundContainer {
+    top: 18px;
+    right: 80px;
     display: flex;
     position: fixed;
-    width: 95px; 
+    width: 95px;
     height: 40px;
     border: 2px solid #ffd480;
     border-radius: 30px;
     background-color: rgba(172, 106, 0, 0.78);
     align-items: center;
-    justify-content: space-between; 
-    padding: 0 10px; 
+    justify-content: space-between;
+    padding: 0 10px;
 }
 
 .soundContainer::after {
     content: "";
     display: block;
-    width: 1px; 
-    height: 70%; 
-    background-color: white; 
+    width: 1px;
+    height: 70%;
+    background-color: white;
     position: absolute;
-    left: 50%; 
+    left: 50%;
     transform: translateX(-50%);
 }
 
-.chatContainer {
+/* .chatContainer {
     position: fixed; 
     top: 350px; 
     left: 20px;
-}
+} */
+
+
+/* .chatContainer {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+  } */
+
+
+/* .chatContainer {
+    display: none;
+    position: fixed;
+    bottom: 200px;
+    left: 10px;
+    width: 300px;
+    max-width: 90%;
+    background-color: rgba(255, 255, 255, 0); 
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+
 .chatBoard {
     width: 300px;
     min-height:350px;
@@ -366,13 +525,6 @@ body {
     margin-bottom:10px; 
 }
 
-.inputContainer {
-    display: flex;
-    align-items: center;
-    width: 300px;
-}
-
-
 .message {
     background-color:rgba(255, 212, 128, 0.4);
     padding: 8px;
@@ -385,8 +537,123 @@ body {
     font-weight: 500;
     font-style: normal;
     font-size:15px;
+} */
+
+
+.chatContainer {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    width: 300px;
+    max-width: 350px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
 }
 
+.chatBoard {
+    width: 100%;
+    min-height: 300px;
+    max-height: 350px;
+    padding: 10px;
+    border: 3px solid #ffd480;
+    border-radius: 10px;
+    background-color: rgba(242, 242, 242, 0.7);
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+}
+
+.message {
+    background-color: rgba(255, 212, 128, 0.4);
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: "Merienda", cursive;
+    font-size: 14px;
+    word-wrap: break-word;
+}
+
+.inputContainer {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+.messageInput {
+    flex: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sendButton {
+    padding: 10px 15px;
+    background-color: #ffd480;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sendButton i {
+    font-size: 16px;
+    color: aliceblue;
+}
+
+@media (max-width: 768px) {
+    .chatBoard {
+        min-height: 150px;
+        max-height: 200px;
+    }
+
+    .message {
+        font-size: 10px;
+    }
+
+    .messageInput {
+        font-size: 10px;
+    }
+
+    .sendButton i {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatBoard {
+        min-height: 100px;
+        max-height: 150px;
+    }
+
+    .message {
+        font-size: 10px;
+    }
+
+    .messageInput {
+        font-size: 10px;
+    }
+
+    .sendButton {
+        padding: 8px 10px;
+    }
+
+    .sendButton i {
+        font-size: 12px;
+    }
+}
+
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
 
 .messageInput {
     flex: 1;
@@ -422,22 +689,66 @@ body {
 
 /* For WebKit browsers (Chrome, Safari, Edge) */
 .chatBoard::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    width: 8px;
+    /* Width of the scrollbar */
 }
 
 .chatBoard::-webkit-scrollbar-track {
-    background: rgba(242, 242, 242, 0.5); /* Background of the scrollbar track */
-    border-radius: 10px; /* Rounded corners for the track */
+    background: rgba(242, 242, 242, 0.5);
+    /* Background of the scrollbar track */
+    border-radius: 10px;
+    /* Rounded corners for the track */
 }
 
 .chatBoard::-webkit-scrollbar-thumb {
-    background-color: rgba(172, 106, 0, 0.78); /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners for the thumb */
-    border: 2px solid rgba(242, 242, 242, 0.7); /* Optional: border around the thumb */
+    background-color: rgba(172, 106, 0, 0.78);
+    /* Color of the scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners for the thumb */
+    border: 2px solid rgba(242, 242, 242, 0.7);
+    /* Optional: border around the thumb */
 }
 
 /* For Firefox */
 .chatBoard {
-    scrollbar-width: thin; /* Thin scrollbar */
-    scrollbar-color: rgba(172, 106, 0, 0.78) rgba(242, 242, 242, 0); /* Thumb and track color */
+    scrollbar-width: thin;
+    /* Thin scrollbar */
+    scrollbar-color: rgba(172, 106, 0, 0.78) rgba(242, 242, 242, 0);
+    /* Thumb and track color */
+}
+
+
+
+.slide-in-left {
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+.slide-out-left {
+    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-out-left {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
 }

@@ -46,27 +46,64 @@ function spreadCards() {
         cards.forEach(card => {
             card.classList.add('spread'); // Xòe bài
         });
-        shuffleSpreadButton.classList.add('spread'); 
+        shuffleSpreadButton.classList.add('spread');
         isSpread = true;
     }
 }
 
+// cards.forEach(card => {
+//     card.addEventListener('click', function () {
+//         if (isSpread) {
+//             // Tìm lá bài đang flipped
+//             const flippedCard = document.querySelector('.card.flipped');
+
+//             // Nếu có lá bài flipped và không phải là lá bài hiện tại
+//             if (flippedCard && flippedCard !== this) {
+//                 // Xóa class flipped và loại bỏ lá bài khỏi DOM
+//                 flippedCard.classList.remove('active', 'flipped');
+//                 flippedCard.remove(); // Loại bỏ lá bài khỏi danh sách
+//             }
+
+//             // Lật lá bài được click
+//             this.classList.add('active', 'flipped');
+//         }
+//     });
+// });
+
 cards.forEach(card => {
     card.addEventListener('click', function () {
         if (isSpread) {
-            // Tìm lá bài đang flipped
-            const flippedCard = document.querySelector('.card.flipped');
-
-            // Nếu có lá bài flipped và không phải là lá bài hiện tại
-            if (flippedCard && flippedCard !== this) {
-                // Xóa class flipped và loại bỏ lá bài khỏi DOM
-                flippedCard.classList.remove('active', 'flipped');
-                flippedCard.remove(); // Loại bỏ lá bài khỏi danh sách
-            }
-
-            // Lật lá bài được click
-            this.classList.add('active', 'flipped');
+            cards.forEach(c => {
+                if (c !== card) {
+                  c.classList.remove('active', 'flip');
+                }
+              });
+          
+              // Thêm hoặc chuyển đổi class active và flip cho thẻ được click
+              card.classList.toggle('active');
+              card.classList.toggle('flip');  
         }
+
     });
+});
+
+
+const chatButton = document.querySelector('.chatButton');
+const chatContainer = document.querySelector('.chatContainer');
+let isChatOpen = false;
+
+chatButton.addEventListener('click', () => {
+    if (!isChatOpen) {
+        chatContainer.classList.remove('slide-out-left');
+        chatContainer.classList.add('slide-in-left');
+        chatContainer.style.display = 'block';
+    } else {
+        chatContainer.classList.remove('slide-in-left');
+        chatContainer.classList.add('slide-out-left');
+        setTimeout(() => {
+            chatContainer.style.display = 'none';
+        }, 500); // Đợi animation hoàn thành (0.5s)
+    }
+    isChatOpen = !isChatOpen;
 });
 
